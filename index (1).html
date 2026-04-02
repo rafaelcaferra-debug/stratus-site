@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stratus — Mais Clientes para a Sua Imobiliária</title>
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+.top-logo{position:fixed;top:18px;left:24px;z-index:1001}
+.top-logo img{height:28px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#06080c;--bg2:#0a0d14;--bg3:#10141e;--bg4:#171d2b;--text:#f0f2f7;--text2:#8b93a7;--text3:#4d5569;--blue:#3b82f6;--blue2:#60a5fa;--amber:#d4a04a;--amber2:#e8b960;--amber3:#b8862e;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);--glass:rgba(255,255,255,0.04);--sans:'DM Sans',sans-serif;--serif:'Playfair Display',serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--blue);color:#fff}
+a{color:inherit;text-decoration:none}
+
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:1000;padding:10px 8px;display:flex;align-items:center;gap:4px;background:rgba(16,20,30,.45);backdrop-filter:blur(24px) saturate(1.4);border:1px solid rgba(255,255,255,.08);border-radius:100px;box-shadow:0 4px 24px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.06);max-width:calc(100% - 32px)}
+.nav-logo{display:flex;align-items:center;gap:8px;padding:0 12px}
+.nav-logo img{height:20px;filter:invert(1)}
+.nav-logo span{font-size:15px;font-weight:600}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{color:var(--text2);font-size:13px;font-weight:500;padding:8px 14px;border-radius:100px;transition:all .2s}
+.nav-link:hover{color:var(--text);background:rgba(255,255,255,.06)}
+.nav-cta{background:var(--amber);color:#000!important;padding:8px 20px;border-radius:100px;font-size:13px;font-weight:700;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--amber2)}
+.lang-sw{display:flex;margin-left:4px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;border:1px solid var(--border)}
+.lang-btn{padding:6px 12px;font-size:11px;font-weight:600;color:var(--text3);cursor:pointer;border:none;background:none;font-family:var(--sans);transition:all .2s}
+.lang-btn.active{color:var(--text);background:rgba(255,255,255,.1)}
+
+/* HERO */
+.hero-wrap{position:relative;overflow:visible}
+.hero-glow{position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(ellipse,rgba(59,130,246,.08) 0%,rgba(212,160,74,.04) 40%,transparent 70%);pointer-events:none}
+.hero{max-width:1000px;margin:0 auto;padding:140px 32px 40px;text-align:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#22c55e;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);padding:6px 16px;border-radius:100px;margin-bottom:28px;opacity:0;animation:up .6s ease .1s forwards}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.15;letter-spacing:-1.5px;max-width:720px;margin:0 auto;opacity:0;animation:up .6s ease .25s forwards}
+.hero h1 i{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--amber)}
+.hero-actions{display:flex;gap:12px;justify-content:center;margin-top:36px;opacity:0;animation:up .6s ease .4s forwards}
+.btn-p{background:var(--amber);color:#000;padding:14px 32px;border:none;border-radius:10px;font-family:var(--sans);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 20px rgba(212,160,74,.2)}
+.btn-p:hover{background:var(--amber2);transform:translateY(-1px);box-shadow:0 8px 28px rgba(212,160,74,.3)}
+.btn-g{background:var(--glass);color:var(--text);padding:14px 32px;border:1px solid var(--border2);border-radius:10px;font-family:var(--sans);font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;backdrop-filter:blur(10px)}
+.btn-g:hover{border-color:var(--amber3);color:var(--amber)}
+
+/* SHRINKING MOCKUP */
+.mockup-container{position:relative;height:700px;margin-top:40px}
+.mockup-sticky{position:sticky;top:80px;z-index:2;transition:transform .05s linear}
+.mockup-inner{max-width:920px;margin:0 auto;padding:0 24px}
+.mockup{background:rgba(16,20,30,.6);backdrop-filter:blur(20px);border:1px solid var(--border2);border-radius:20px;padding:24px;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5),0 8px 20px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.07)}
+.mockup::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:50%;height:1px;background:linear-gradient(90deg,transparent,var(--amber3),transparent)}
+.mockup::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(255,255,255,.03) 0%,transparent 40%);pointer-events:none;border-radius:20px}
+.mhdr{display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.mdot{width:8px;height:8px;border-radius:50%}
+.dr{background:#ef4444}.dy{background:#eab308}.dg{background:#22c55e}
+.mtit{font-size:14px;color:var(--text2);margin-left:8px}
+.mrow{display:flex;align-items:center;gap:14px;padding:14px 18px;background:rgba(255,255,255,.02);border-radius:12px;margin-bottom:8px;border:1px solid var(--border);transition:all .3s}
+.mrow:hover{background:rgba(255,255,255,.05);border-color:var(--border2);transform:translateX(4px)}
+.mchk{width:20px;height:20px;border-radius:6px;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--blue);flex-shrink:0}
+.mchk.done{background:var(--blue);color:#fff;border-color:var(--blue)}
+.mrow-t{font-size:14px;color:var(--text2);flex:1}
+.tag{font-size:11px;padding:4px 12px;border-radius:100px;font-weight:700}
+.tag-new{background:rgba(59,130,246,.12);color:var(--blue2)}
+.tag-hot{background:rgba(239,68,68,.1);color:#f87171}
+.tag-qual{background:rgba(34,197,94,.1);color:#4ade80}
+.mglow{position:absolute;bottom:-50%;left:50%;transform:translateX(-50%);width:80%;height:200px;background:radial-gradient(ellipse,rgba(59,130,246,.08) 0%,transparent 70%);pointer-events:none}
+
+.hero-trust{max-width:1000px;margin:0 auto;padding:20px 32px;text-align:center}
+.hero-trust p{font-size:12px;color:var(--text3);margin-bottom:12px}
+.logos{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;opacity:.5}
+.logos span{font-size:13px;font-weight:600;letter-spacing:1px;color:var(--text2)}
+
+/* SECTIONS */
+.section{padding:100px 32px;max-width:1000px;margin:0 auto}
+.sec-full{padding:100px 32px;max-width:none;border-top:1px solid var(--border);background:var(--bg2)}
+.sfi{max-width:1000px;margin:0 auto}
+.stag{font-size:12px;font-weight:700;color:var(--amber);margin-bottom:12px;letter-spacing:1px;text-transform:uppercase}
+.stitle{font-size:clamp(26px,3.5vw,42px);font-weight:700;line-height:1.15;max-width:560px;margin-bottom:14px;letter-spacing:-.5px}
+.stitle i{font-family:var(--serif);font-style:italic;font-weight:500}
+.ssub{font-size:15px;color:var(--text2);max-width:460px;line-height:1.7;margin-bottom:48px}
+.c{text-align:center}.c .stitle,.c .ssub{margin-left:auto;margin-right:auto}
+
+/* ANIMATED CHART */
+.chart-section{padding:100px 32px;max-width:1000px;margin:0 auto}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.chart-stats{display:flex;flex-direction:column;gap:24px}
+.chart-stat{display:flex;align-items:flex-end;gap:8px}
+.chart-stat-val{font-size:48px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--blue),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.chart-stat-label{font-size:14px;color:var(--text2);padding-bottom:8px}
+.chart-box{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden}
+.chart-box::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:50%;height:1px;background:linear-gradient(90deg,transparent,var(--amber3),transparent)}
+.chart-title{font-size:13px;color:var(--text2);margin-bottom:20px}
+.chart-bars{display:flex;align-items:flex-end;gap:8px;height:180px}
+.chart-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%}
+.chart-bar{width:100%;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--amber),var(--blue));transition:height 1.2s cubic-bezier(.25,.46,.45,.94);height:0;margin-top:auto}
+.chart-bar.animated{height:var(--h)}
+.chart-bar-label{font-size:11px;color:var(--text3);font-weight:600}
+.chart-line{display:flex;justify-content:space-between;margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.chart-line-item{text-align:center}
+.chart-line-val{font-size:18px;font-weight:700;color:var(--text)}
+.chart-line-label{font-size:11px;color:var(--text3)}
+
+/* STEPS */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step-card{background:rgba(255,255,255,.02);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:18px;padding:28px;transition:all .3s;position:relative;overflow:hidden}
+.step-card:hover{border-color:rgba(212,160,74,.15);transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.step-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--amber));transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.step-card:hover::before{transform:scaleX(1)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:rgba(212,160,74,.1);color:var(--amber);font-size:14px;font-weight:700;margin-bottom:16px}
+.step-card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+.step-card p{font-size:13px;color:var(--text2);line-height:1.65}
+
+.feat-rev{text-align:center;padding:80px 32px;max-width:700px;margin:0 auto;border-bottom:1px solid var(--border)}
+.feat-stars{color:var(--amber);font-size:16px;letter-spacing:3px;margin-bottom:20px}
+.feat-q{font-size:clamp(20px,3vw,30px);font-weight:600;line-height:1.3}
+.feat-q i{font-family:var(--serif);font-style:italic;font-weight:500}
+.feat-attr{font-size:14px;color:var(--text3);margin-top:16px}
+
+/* CAROUSEL */
+.carousel-sec{padding:100px 0;border-top:1px solid var(--border);background:var(--bg2);overflow:hidden}
+.carousel-header{max-width:1000px;margin:0 auto;padding:0 32px;margin-bottom:48px}
+.carousel-row{overflow:hidden;width:100%;margin-bottom:16px}
+.carousel-track{display:flex;gap:16px;width:max-content;padding:0 8px}
+.ct-left{animation:csl 35s linear infinite}
+.ct-right{animation:csr 40s linear infinite}
+.ct-left:hover,.ct-right:hover{animation-play-state:paused}
+@keyframes csl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes csr{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+.rev-card{flex-shrink:0;width:340px;background:rgba(255,255,255,.02);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .3s}
+.rev-card:hover{border-color:rgba(212,160,74,.15);transform:translateY(-4px)}
+.rev-stars{color:var(--amber);font-size:12px;letter-spacing:2px;margin-bottom:10px}
+.rev-text{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px;font-style:italic}
+.rev-text::before{content:'"';font-family:var(--serif);font-size:28px;color:var(--amber);line-height:0;vertical-align:middle;margin-right:2px}
+.rev-auth{display:flex;align-items:center;gap:10px}
+.rev-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--amber));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.rev-name{font-size:13px;font-weight:600}
+.rev-role{font-size:11px;color:var(--text3)}
+
+.soon-card{max-width:600px;margin:0 auto;text-align:center;background:rgba(255,255,255,.02);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:24px;padding:48px 32px;position:relative;overflow:hidden}
+.soon-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:40%;height:1px;background:linear-gradient(90deg,transparent,var(--amber3),transparent)}
+.soon-badge{display:inline-block;background:rgba(212,160,74,.1);border:1px solid rgba(212,160,74,.15);color:var(--amber);font-size:12px;font-weight:700;padding:6px 20px;border-radius:100px;margin-bottom:20px;letter-spacing:1px}
+.soon-card h3{font-size:24px;font-weight:700;margin-bottom:10px}
+.soon-card h3 i{font-family:var(--serif);font-style:italic;font-weight:500}
+.soon-card>p{font-size:15px;color:var(--text2);line-height:1.7;max-width:400px;margin:0 auto 28px}
+.soon-input{display:flex;gap:8px;max-width:380px;margin:0 auto}
+.soon-input input{flex:1;background:var(--bg);border:1px solid var(--border2);border-radius:10px;padding:12px 16px;color:var(--text);font-size:14px;font-family:var(--sans);outline:none}
+.soon-input input:focus{border-color:var(--amber3)}
+.soon-input input::placeholder{color:var(--text3)}
+.soon-input button{background:var(--amber);color:#000;border:none;border-radius:10px;padding:12px 24px;font-family:var(--sans);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap}
+.soon-input button:hover{background:var(--amber2)}
+
+.faq-list{max-width:680px;margin:0 auto}
+.faq-item{border:1px solid var(--border);border-radius:14px;margin-bottom:8px;overflow:hidden;background:rgba(255,255,255,.01);transition:border-color .3s}
+.faq-item:hover{border-color:rgba(212,160,74,.12)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;cursor:pointer;font-size:15px;font-weight:600;user-select:none;transition:background .2s}
+.faq-q:hover{background:var(--glass)}
+.faq-arrow{font-size:20px;color:var(--text3);transition:transform .3s,color .3s;flex-shrink:0;margin-left:12px}
+.faq-item.open .faq-arrow{transform:rotate(45deg);color:var(--amber)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:4px 24px 24px}
+.faq-a-inner p{font-size:14px;color:var(--text2);line-height:1.8}
+
+.cta-sec{text-align:center;padding:100px 32px 120px;position:relative;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.cta-sec::before{content:'';position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(212,160,74,.06) 0%,rgba(59,130,246,.03) 50%,transparent 70%);pointer-events:none}
+.cta-icon{width:48px;height:48px;margin-bottom:24px;background:rgba(212,160,74,.1);border:1px solid rgba(212,160,74,.15);border-radius:14px;display:flex;align-items:center;justify-content:center}
+.cta-icon img{height:22px;filter:invert(1)}
+.cta-sec .stitle{text-align:center;margin-left:auto;margin-right:auto}
+.cta-sec .ssub{text-align:center;margin-left:auto;margin-right:auto}
+.cta-note{font-size:13px;color:var(--text3);margin-top:16px}
+
+footer{border-top:1px solid var(--border);padding:40px 32px;max-width:1000px;margin:0 auto}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;margin-bottom:24px}
+.ft-left p{font-size:13px;color:var(--text3);max-width:280px;margin-top:12px}
+.ft-col h4{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.ft-col a{display:block;font-size:13px;color:var(--text2);padding:3px 0;transition:color .2s}
+.ft-col a:hover{color:var(--amber)}
+.ft-bot{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.ft-bot p{font-size:12px;color:var(--text3)}
+
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:900px){.steps-grid{grid-template-columns:1fr}.chart-grid{grid-template-columns:1fr}}
+@media(max-width:768px){nav{top:8px;padding:8px 6px;gap:2px}.nav-link{display:none}.hero{padding:110px 16px 40px}.section,.cta-sec,.chart-section{padding:60px 16px}.sec-full,.carousel-sec{padding:60px 0}.carousel-header{padding:0 16px}.hero-actions{flex-direction:column;align-items:center}.btn-p,.btn-g{width:100%;text-align:center;justify-content:center}.ft-top{flex-direction:column}.feat-rev{padding:48px 16px}.lang-btn{padding:5px 8px;font-size:10px}.soon-input{flex-direction:column}.mockup-container{height:550px}}
+</style>
+</head>
+<body>
+
+<a class="top-logo" href="#"><img src="logo.png" alt="Stratus" style="height:28px;filter:invert(1)"></a>
+
+<nav>
+  <div class="nav-links">
+    <a class="nav-link" href="#sec-como" data-pt="Como Funciona" data-en="How It Works">Como Funciona</a>
+    <a class="nav-link" href="#sec-precos" data-pt="Preços" data-en="Pricing">Preços</a>
+    <a class="nav-link" href="#sec-reviews" data-pt="Resultados" data-en="Results">Resultados</a>
+    <a class="nav-link" href="#sec-faq">FAQ</a>
+  </div>
+  <a class="nav-cta" href="#sec-cta" data-pt="Falar Connosco" data-en="Contact Us">Falar Connosco</a>
+  <div class="lang-sw"><button class="lang-btn active" id="btn-pt">PT</button><button class="lang-btn" id="btn-en">EN</button></div>
+</nav>
+
+<div class="hero-wrap">
+  <div class="hero-glow"></div>
+  <div class="hero">
+    <div class="hero-badge" data-pt="Mais de 25 leads entregues por semana" data-en="Over 25 leads delivered weekly">Mais de 25 leads entregues por semana</div>
+    <h1 data-pt='Mais clientes para a sua imobiliária, <i>sem esforço.</i>' data-en='More clients for your real estate agency, <i>effortlessly.</i>'>Mais clientes para a sua imobiliária, <i>sem esforço.</i></h1>
+    <div class="hero-actions">
+      <a class="btn-p" href="#sec-cta" data-pt="Experimentar Grátis →" data-en="Try For Free →">Experimentar Grátis →</a>
+      <a class="btn-g" href="#sec-como" data-pt="Ver Como Funciona" data-en="See How It Works">Ver Como Funciona</a>
+    </div>
+  </div>
+</div>
+
+<!-- SHRINKING MOCKUP -->
+<div class="mockup-container" id="mockupZone">
+  <div class="mockup-sticky" id="mockupSticky">
+    <div class="mockup-inner">
+      <div class="mockup">
+        <div class="mhdr"><div class="mdot dr"></div><div class="mdot dy"></div><div class="mdot dg"></div><div class="mtit">Painel de Leads — Stratus</div></div>
+        <div class="mrow"><div class="mchk done">✓</div><div class="mrow-t">Ana R. quer vender T3 em Almada</div><span class="tag tag-hot">Urgente</span></div>
+        <div class="mrow"><div class="mchk done">✓</div><div class="mrow-t">Pedro M. procura moradia na Margem Sul</div><span class="tag tag-qual">Qualificado</span></div>
+        <div class="mrow"><div class="mchk">✓</div><div class="mrow-t">Sofia L. interessada em apartamento centro</div><span class="tag tag-new">Novo</span></div>
+        <div class="mrow"><div class="mchk">✓</div><div class="mrow-t">Marcos T. quer agendar visita sábado</div><span class="tag tag-new">Novo</span></div>
+        <div class="mglow"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero-trust rv">
+  <p data-pt="Ajudamos imobiliárias a crescer por todo o país" data-en="Helping real estate agencies grow nationwide">Ajudamos imobiliárias a crescer por todo o país</p>
+  <div class="logos"><span>● Almada</span><span>● Setúbal</span><span>● Lisboa</span><span>● Porto</span><span>● Algarve</span></div>
+</div>
+
+<!-- ANIMATED CHART SECTION -->
+<div class="chart-section" id="sec-chart">
+  <div class="chart-grid">
+    <div>
+      <div class="stag rv" data-pt="Resultados reais" data-en="Real results">Resultados reais</div>
+      <h2 class="stitle rv" data-pt='Números que <i>crescem.</i>' data-en='Numbers that <i>grow.</i>'>Números que <i>crescem.</i></h2>
+      <div class="chart-stats rv">
+        <div class="chart-stat"><div class="chart-stat-val" data-count="847">0</div><div class="chart-stat-label" data-pt="leads entregues" data-en="leads delivered">leads entregues</div></div>
+        <div class="chart-stat"><div class="chart-stat-val" data-count="32">0</div><div class="chart-stat-label" data-pt="negócios fechados" data-en="deals closed">negócios fechados</div></div>
+        <div class="chart-stat"><div class="chart-stat-val" data-count="96" data-suffix="%">0</div><div class="chart-stat-label" data-pt="taxa de satisfação" data-en="satisfaction rate">taxa de satisfação</div></div>
+      </div>
+    </div>
+    <div class="chart-box rv" id="chartBox">
+      <div class="chart-title" data-pt="Leads gerados por mês" data-en="Leads generated per month">Leads gerados por mês</div>
+      <div class="chart-bars">
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:25%" data-delay="0"></div><div class="chart-bar-label">Jan</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:40%" data-delay="100"></div><div class="chart-bar-label">Fev</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:35%" data-delay="200"></div><div class="chart-bar-label">Mar</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:55%" data-delay="300"></div><div class="chart-bar-label">Abr</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:65%" data-delay="400"></div><div class="chart-bar-label">Mai</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:78%" data-delay="500"></div><div class="chart-bar-label">Jun</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:85%" data-delay="600"></div><div class="chart-bar-label">Jul</div></div>
+        <div class="chart-bar-wrap"><div class="chart-bar" style="--h:100%" data-delay="700"></div><div class="chart-bar-label">Ago</div></div>
+      </div>
+      <div class="chart-line">
+        <div class="chart-line-item"><div class="chart-line-val" data-pt="↑ 312%" data-en="↑ 312%">↑ 312%</div><div class="chart-line-label" data-pt="crescimento" data-en="growth">crescimento</div></div>
+        <div class="chart-line-item"><div class="chart-line-val">€47</div><div class="chart-line-label" data-pt="custo/lead" data-en="cost/lead">custo/lead</div></div>
+        <div class="chart-line-item"><div class="chart-line-val" data-pt="4.2x ROI" data-en="4.2x ROI">4.2x ROI</div><div class="chart-line-label" data-pt="retorno" data-en="return">retorno</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-full" id="sec-como">
+  <div class="sfi">
+    <div class="c">
+      <div class="stag rv" data-pt="Como Funciona" data-en="How It Works">Como Funciona</div>
+      <h2 class="stitle rv" data-pt='Começar é <i>simples.</i>' data-en='Getting started is <i>simple.</i>'>Começar é <i>simples.</i></h2>
+      <p class="ssub rv" data-pt="Nós fazemos tudo — você só fecha negócios." data-en="We handle everything — you just close deals.">Nós fazemos tudo — você só fecha negócios.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card rv"><div class="step-num">1</div><h3 data-pt="Consulta Gratuita" data-en="Free Consultation">Consulta Gratuita</h3><p data-pt="Analisamos a sua presença digital e identificamos oportunidades. 30 minutos, sem compromisso." data-en="We analyze your digital presence and spot opportunities. 30 min, no commitment.">Analisamos a sua presença digital e identificamos oportunidades. 30 minutos, sem compromisso.</p></div>
+      <div class="step-card rv"><div class="step-num">2</div><h3 data-pt="Setup do Sistema" data-en="System Setup">Setup do Sistema</h3><p data-pt="Landing pages, automações, chatbot e conteúdo em 5-7 dias. Zero esforço." data-en="Landing pages, automations, chatbot and content in 5-7 days. Zero effort.">Landing pages, automações, chatbot e conteúdo em 5-7 dias. Zero esforço.</p></div>
+      <div class="step-card rv"><div class="step-num">3</div><h3 data-pt="Receba Leads" data-en="Receive Leads">Receba Leads</h3><p data-pt="O sistema funciona 24/7. Notificações de cada lead qualificado." data-en="The system works 24/7. Notifications for each qualified lead.">O sistema funciona 24/7. Notificações de cada lead qualificado.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="feat-rev rv"><div class="feat-stars">★★★★★</div><div class="feat-q" data-pt='A Stratus completamente <i>transformou</i> a forma como captamos clientes.' data-en='Stratus completely <i>transformed</i> how we acquire clients.'>A Stratus completamente <i>transformou</i> a forma como captamos clientes.</div><div class="feat-attr">— Ricardo Silva, RE/MAX Lisboa</div></div>
+
+<div class="carousel-sec" id="sec-reviews">
+  <div class="carousel-header c">
+    <div class="stag rv" data-pt="Resultados" data-en="Results">Resultados</div>
+    <h2 class="stitle rv" data-pt='O que <i>outros</i> dizem.' data-en='What <i>others</i> say.'>O que <i>outros</i> dizem.</h2>
+    <p class="ssub rv" data-pt="Agentes que já transformaram a captação de clientes." data-en="Agents who already transformed client acquisition.">Agentes que já transformaram a captação de clientes.</p>
+  </div>
+  <div class="carousel-row"><div class="carousel-track ct-left" id="ct1">
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Em 3 meses passámos de 5 para mais de 30 contactos. O sistema mudou tudo."</div><div class="rev-auth"><div class="rev-av">RS</div><div><div class="rev-name">Ricardo Silva</div><div class="rev-role">RE/MAX, Lisboa</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">O chatbot agenda 8-10 visitas por semana. Não perco leads fora de horário."</div><div class="rev-auth"><div class="rev-av">AM</div><div><div class="rev-name">Ana Martins</div><div class="rev-role">Century 21, Setúbal</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Reviews no Google de 12 para 67 em 4 meses. Primeira opção na zona."</div><div class="rev-auth"><div class="rev-av">JP</div><div><div class="rev-name">João Pereira</div><div class="rev-role">Pereira Imobiliária</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Percebem o imobiliário. Não é marketing genérico — são resultados concretos."</div><div class="rev-auth"><div class="rev-av">MC</div><div><div class="rev-name">Maria Costa</div><div class="rev-role">KW Portugal</div></div></div></div>
+  </div></div>
+  <div class="carousel-row"><div class="carousel-track ct-right" id="ct2">
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Investimento pagou-se no primeiro mês. Uma venda cobriu tudo e sobrou."</div><div class="rev-auth"><div class="rev-av">TF</div><div><div class="rev-name">Tiago Ferreira</div><div class="rev-role">Agente, Porto</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Follow-up automático reativou clientes dados como perdidos. Receita extra."</div><div class="rev-auth"><div class="rev-av">SL</div><div><div class="rev-name">Sofia Lopes</div><div class="rev-role">ERA Almada</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">A landing page converteu 3x mais que o nosso site. Leads qualificados diários."</div><div class="rev-auth"><div class="rev-av">DC</div><div><div class="rev-name">Daniel Cruz</div><div class="rev-role">Remax, Faro</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><div class="rev-text">Deixámos de depender de portais. Temos o nosso canal de leads próprio."</div><div class="rev-auth"><div class="rev-av">LM</div><div><div class="rev-name">Lúcia Mendes</div><div class="rev-role">Mendes & Filhos, Braga</div></div></div></div>
+  </div></div>
+</div>
+
+<div class="section" id="sec-precos">
+  <div class="c">
+    <div class="stag rv" data-pt="Preços" data-en="Pricing">Preços</div>
+    <h2 class="stitle rv" data-pt='Preços simples, sem <i>surpresas.</i>' data-en='Simple pricing, no <i>surprises.</i>'>Preços simples, sem <i>surpresas.</i></h2>
+    <p class="ssub rv" data-pt="Estamos a preparar os nossos planos. Deixe o seu email para ser o primeiro a saber." data-en="We're preparing our plans. Leave your email to be the first to know.">Estamos a preparar os nossos planos. Deixe o seu email para ser o primeiro a saber.</p>
+  </div>
+  <div class="soon-card rv"><div class="soon-badge" data-pt="BREVEMENTE" data-en="COMING SOON">BREVEMENTE</div><h3 data-pt='Brevemente disponível <i>online.</i>' data-en='Coming <i>soon.</i>'>Brevemente disponível <i>online.</i></h3><p data-pt="Seja o primeiro a aceder aos nossos planos exclusivos." data-en="Be the first to access our exclusive plans.">Seja o primeiro a aceder aos nossos planos exclusivos.</p><div class="soon-input"><input type="email" placeholder="O seu email..." data-pt-ph="O seu email..." data-en-ph="Your email..."><button data-pt="Notificar-me" data-en="Notify me">Notificar-me</button></div></div>
+</div>
+
+<div class="sec-full" id="sec-faq">
+  <div class="sfi">
+    <div class="c">
+      <div class="stag rv">FAQ</div>
+      <h2 class="stitle rv" data-pt='Tudo o que <i>precisa</i> de saber.' data-en='Everything you <i>need</i> to know.'>Tudo o que <i>precisa</i> de saber.</h2>
+      <p class="ssub rv" data-pt="Respostas às perguntas mais frequentes." data-en="Answers to frequently asked questions.">Respostas às perguntas mais frequentes.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item rv"><div class="faq-q"><span data-pt="Funciona para agentes independentes?" data-en="Does it work for independent agents?">Funciona para agentes independentes?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim. Para agentes independentes e agências de qualquer dimensão. Adaptamos o plano às suas necessidades e orçamento, garantindo resultados." data-en="Yes. For independent agents and agencies of any size. We adapt the plan to your needs and budget.">Sim. Para agentes independentes e agências de qualquer dimensão. Adaptamos o plano às suas necessidades e orçamento, garantindo resultados.</p></div></div></div>
+      <div class="faq-item rv"><div class="faq-q"><span data-pt="Quanto tempo até ver resultados?" data-en="How long until I see results?">Quanto tempo até ver resultados?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="A maioria recebe leads na primeira semana. Resultados consistentes em 2-4 semanas." data-en="Most receive leads in the first week. Consistent results within 2-4 weeks.">A maioria recebe leads na primeira semana. Resultados consistentes em 2-4 semanas.</p></div></div></div>
+      <div class="faq-item rv"><div class="faq-q"><span data-pt="Posso experimentar antes de me comprometer?" data-en="Can I try before committing?">Posso experimentar antes de me comprometer?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim. Consulta gratuita de 30 minutos onde analisamos o seu caso e mostramos o que podemos fazer. Sem qualquer compromisso." data-en="Yes. Free 30-minute consultation where we analyze your case. No commitment.">Sim. Consulta gratuita de 30 minutos onde analisamos o seu caso e mostramos o que podemos fazer. Sem qualquer compromisso.</p></div></div></div>
+      <div class="faq-item rv"><div class="faq-q"><span data-pt="Posso cancelar a qualquer momento?" data-en="Can I cancel anytime?">Posso cancelar a qualquer momento?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim. Sem fidelização. Cancele com 30 dias de aviso, sem penalizações." data-en="Yes. No lock-in. Cancel with 30 days notice, no penalties.">Sim. Sem fidelização. Cancele com 30 dias de aviso, sem penalizações.</p></div></div></div>
+      <div class="faq-item rv"><div class="faq-q"><span data-pt="Que tipo de suporte oferecem?" data-en="What support do you offer?">Que tipo de suporte oferecem?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="WhatsApp e email em todos os planos. Suporte prioritário com resposta em menos de 2 horas nos planos avançados." data-en="WhatsApp and email on all plans. Priority support under 2h on advanced plans.">WhatsApp e email em todos os planos. Suporte prioritário com resposta em menos de 2 horas nos planos avançados.</p></div></div></div>
+    </div>
+  </div>
+</div>
+
+<section class="cta-sec" id="sec-cta">
+  <div class="cta-icon rv"><img src="logo.png" alt="" style="height:22px;filter:invert(1)"></div>
+  <h2 class="stitle rv" data-pt='Pronto para <i>transformar</i> a sua captação de clientes?' data-en='Ready to <i>transform</i> your client acquisition?'>Pronto para <i>transformar</i> a sua captação de clientes?</h2>
+  <p class="ssub rv" style="margin-bottom:28px" data-pt="Comece hoje. Consulta gratuita, sem compromisso." data-en="Start today. Free consultation, no commitment.">Comece hoje. Consulta gratuita, sem compromisso.</p>
+  <a class="btn-p rv" href="https://wa.me/351XXXXXXXXX" style="font-size:16px;padding:16px 44px" data-pt="Falar no WhatsApp →" data-en="Chat on WhatsApp →">Falar no WhatsApp →</a>
+  <a class="btn-g rv" href="mailto:geral@stratus.pt" style="font-size:15px;padding:14px 36px;margin-top:12px" data-pt="Enviar Email →" data-en="Send Email →">Enviar Email →</a>
+  <p class="cta-note rv" data-pt="Sem cartão · Sem compromisso · Resposta em 2h" data-en="No card · No commitment · Response in 2h">Sem cartão · Sem compromisso · Resposta em 2h</p>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-left"><div style="display:flex;align-items:center;gap:8px"><img src="logo.png" alt="Stratus" style="height:22px;filter:invert(1)"></div><p data-pt="Automatizamos a captação de clientes para imobiliárias em Portugal." data-en="We automate client acquisition for real estate agencies in Portugal.">Automatizamos a captação de clientes para imobiliárias em Portugal.</p><p style="margin-top:8px"><a href="mailto:geral@stratus.pt" style="color:var(--text2);transition:color .2s" onmouseover="this.style.color='var(--amber)'" onmouseout="this.style.color='var(--text2)'">geral@stratus.pt</a></p></div>
+    <div class="ft-col"><h4 data-pt="Serviços" data-en="Services">Serviços</h4><a href="#">Captação de Leads</a><a href="#">Redes Sociais</a><a href="#">Chatbot 24/7</a><a href="#">Google Business</a></div>
+    <div class="ft-col"><h4 data-pt="Empresa" data-en="Company">Empresa</h4><a href="#sec-reviews" data-pt="Resultados" data-en="Results">Resultados</a><a href="#sec-precos" data-pt="Preços" data-en="Pricing">Preços</a><a href="#sec-faq">FAQ</a><a href="#sec-cta" data-pt="Contacto" data-en="Contact">Contacto</a></div>
+  </div>
+  <div class="ft-bot"><p>© 2026 Stratus.</p><p>🤖</p></div>
+</footer>
+
+<script>
+// Reveal
+const ob=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*60);ob.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>ob.observe(el));
+
+// Carousels
+document.getElementById('ct1').innerHTML+=document.getElementById('ct1').innerHTML;
+document.getElementById('ct2').innerHTML+=document.getElementById('ct2').innerHTML;
+
+// Shrinking mockup on scroll
+const mZone=document.getElementById('mockupZone');
+const mSticky=document.getElementById('mockupSticky');
+function updateMockup(){
+  const r=mZone.getBoundingClientRect();
+  const total=mZone.offsetHeight-window.innerHeight*.4;
+  const progress=Math.max(0,Math.min(1,-r.top/total));
+  const scale=1-progress*.25;
+  const rotX=12*(1-progress);
+  const rotY=-3*(1-progress);
+  const ty=progress*20;
+  mSticky.style.transform=`perspective(1200px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(${scale}) translateY(${ty}px)`;
+}
+window.addEventListener('scroll',updateMockup,{passive:true});
+updateMockup();
+
+// Chart bars animation
+const chartOb=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.chart-bar').forEach(b=>{const d=parseInt(b.dataset.delay)||0;setTimeout(()=>b.classList.add('animated'),d)});chartOb.unobserve(e.target)}})},{threshold:.3});
+chartOb.observe(document.getElementById('chartBox'));
+
+// Counter animation
+const cntOb=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target;const end=+el.dataset.count;const suf=el.dataset.suffix||'';let cur=0;const step=Math.max(1,Math.ceil(end/120));const t=setInterval(()=>{cur+=step;if(cur>=end){cur=end;clearInterval(t)}el.textContent=cur+suf},40);cntOb.unobserve(el)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cntOb.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',function(){const it=this.parentElement;const w=it.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(f=>f.classList.remove('open'));if(!w)it.classList.add('open')})});
+
+// Language
+const bP=document.getElementById('btn-pt'),bE=document.getElementById('btn-en');
+bP.addEventListener('click',()=>setLang('pt'));
+bE.addEventListener('click',()=>setLang('en'));
+function setLang(l){bP.classList.toggle('active',l==='pt');bE.classList.toggle('active',l==='en');document.querySelectorAll('[data-'+l+']').forEach(el=>{const v=el.getAttribute('data-'+l);if(v){if(v.includes('<'))el.innerHTML=v;else el.textContent=v}});document.querySelectorAll('[data-'+l+'-ph]').forEach(el=>{el.placeholder=el.getAttribute('data-'+l+'-ph')})}
+</script>
+</body>
+</html>
