@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stratus Connect — Presença Digital Completa para o seu Negócio</title>
+<title>Stratus — Presença Digital Completa para o seu Negócio</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -45,7 +45,6 @@ body{
   position:relative;
 }
  
-/* Ambient background layers */
 body::before{
   content:'';
   position:fixed;inset:0;
@@ -72,7 +71,6 @@ img{display:block;max-width:100%}
  
 main, nav, footer, section{position:relative;z-index:2}
  
-/* === GLASS === */
 .glass{
   background:var(--glass-bg-2);
   backdrop-filter:blur(28px) saturate(180%);
@@ -93,7 +91,7 @@ main, nav, footer, section{position:relative;z-index:2}
   background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
 }
  
-/* === NAV === */
+/* NAV */
 nav{
   position:fixed;
   top:18px;left:50%;
@@ -117,12 +115,12 @@ nav{
   border-radius:8px;
   background:linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--display);font-style:italic;
-  font-size:18px;color:#fff;
+  font-size:15px;color:#fff;font-weight:700;
   box-shadow:0 4px 12px var(--accent-glow), inset 0 1px 0 rgba(255,255,255,0.3);
+  letter-spacing:-0.05em;
+  font-family:var(--sans);
 }
 .nav-name{font-size:14px;font-weight:600;letter-spacing:-0.02em}
-.nav-name i{font-family:var(--display);font-style:italic;font-weight:400;color:var(--accent)}
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-link{
   color:var(--ink-soft);font-size:13px;font-weight:500;
@@ -154,7 +152,7 @@ nav{
 }
 .lang-btn.active{color:var(--ink);background:rgba(255,255,255,0.08)}
  
-/* === HERO === */
+/* HERO */
 .hero{
   max-width:1100px;
   margin:0 auto;
@@ -241,7 +239,7 @@ nav{
 }
 .btn-g:hover{background:rgba(255,255,255,0.07);border-color:var(--glass-border-2);transform:translateY(-2px)}
  
-/* === HERO METRICS === */
+/* HERO METRICS */
 .hero-meta{
   display:flex;justify-content:center;gap:40px;
   margin-top:56px;flex-wrap:wrap;
@@ -252,7 +250,7 @@ nav{
 .hero-meta-num span{color:var(--accent)}
 .hero-meta-lbl{font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:0.1em;font-weight:500}
  
-/* === WHATSAPP MOCKUP === */
+/* RESULTS MOCKUP */
 .mockup-wrap{
   margin:60px auto 0;
   max-width:440px;
@@ -280,86 +278,84 @@ nav{
   content:'';position:absolute;top:0;left:0;right:0;height:1px;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
 }
-.mockup::after{
-  content:'';position:absolute;inset:-1px;border-radius:28px;
-  background:linear-gradient(180deg, rgba(167,139,250,0.2) 0%, transparent 30%, transparent 70%, rgba(124,147,255,0.15) 100%);
-  pointer-events:none;mix-blend-mode:overlay;
-}
-.wa-header{
-  display:flex;align-items:center;gap:11px;
+.mock-header{
+  display:flex;align-items:center;justify-content:space-between;
   padding:14px 18px;
   border-bottom:1px solid var(--hairline);
   background:rgba(255,255,255,0.02);
 }
-.wa-avatar{
-  width:38px;height:38px;border-radius:50%;
-  background:linear-gradient(135deg,#1f2937,#0f172a);
-  display:flex;align-items:center;justify-content:center;
-  font-size:17px;flex-shrink:0;
-  border:1px solid rgba(255,255,255,0.08);
-}
-.wa-name{font-size:14px;font-weight:600;letter-spacing:-0.01em}
-.wa-status{font-size:11px;color:var(--green);display:flex;align-items:center;gap:5px;margin-top:1px}
-.wa-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 6px var(--green)}
-.wa-body{
-  padding:18px;display:flex;flex-direction:column;gap:10px;
-  min-height:280px;
-  background:
-    radial-gradient(ellipse at top, rgba(167,139,250,0.04), transparent 60%),
-    rgba(3,3,8,0.4);
-}
-.wa-msg{
-  max-width:80%;padding:9px 13px;border-radius:14px;
-  font-size:13px;line-height:1.45;letter-spacing:-0.005em;
-}
-.wa-bot{
-  background:rgba(255,255,255,0.06);
-  backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.05);
-  border-radius:14px 14px 14px 4px;
-  align-self:flex-start;
-  color:var(--ink-soft);
-}
-.wa-user{
-  background:linear-gradient(135deg, rgba(167,139,250,0.18), rgba(124,147,255,0.14));
-  border:1px solid rgba(167,139,250,0.25);
-  border-radius:14px 14px 4px 14px;
-  align-self:flex-end;color:var(--ink);
-}
-.wa-time{font-size:9.5px;color:var(--ink-mute);margin-top:3px;text-align:right;letter-spacing:0.02em}
-.wa-typing{
-  display:flex;align-items:center;gap:4px;
-  padding:11px 14px;
-  background:rgba(255,255,255,0.06);
-  border-radius:14px 14px 14px 4px;width:fit-content;
-}
-.wa-dot{width:6px;height:6px;border-radius:50%;background:var(--ink-mute);animation:typing 1.2s infinite ease-in-out}
-.wa-dot:nth-child(2){animation-delay:.2s}
-.wa-dot:nth-child(3){animation-delay:.4s}
-@keyframes typing{
-  0%,60%,100%{transform:translateY(0);opacity:0.4}
-  30%{transform:translateY(-5px);opacity:1}
-}
-.wa-input{
-  display:flex;align-items:center;gap:8px;
-  padding:11px 16px;
-  border-top:1px solid var(--hairline);
-  background:rgba(255,255,255,0.02);
-}
-.wa-input-field{
-  flex:1;background:rgba(255,255,255,0.05);
-  border:1px solid var(--hairline);border-radius:20px;
-  padding:8px 14px;color:var(--ink-mute);font-size:12px;
-}
-.wa-send{
-  width:30px;height:30px;border-radius:50%;
+.mock-header-left{display:flex;align-items:center;gap:10px}
+.mock-logo{
+  width:28px;height:28px;border-radius:7px;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   display:flex;align-items:center;justify-content:center;
-  font-size:13px;flex-shrink:0;color:#fff;
-  box-shadow:0 4px 12px var(--accent-glow);
+  font-size:12px;font-weight:700;color:#fff;
 }
- 
-/* === SECTIONS === */
+.mock-title{font-size:13px;font-weight:600;letter-spacing:-0.01em}
+.mock-sub{font-size:11px;color:var(--green);display:flex;align-items:center;gap:4px;margin-top:1px}
+.mock-sub::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0}
+.mock-period{font-size:11px;color:var(--ink-mute);background:rgba(255,255,255,0.05);padding:3px 8px;border-radius:100px;border:1px solid var(--hairline)}
+
+.mock-body{
+  padding:18px;display:flex;flex-direction:column;gap:12px;
+  background:radial-gradient(ellipse at top, rgba(167,139,250,0.04), transparent 60%);
+}
+.mock-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mock-stat{
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--glass-border);
+  border-radius:14px;padding:14px 16px;
+  position:relative;overflow:hidden;
+}
+.mock-stat::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent);
+}
+.mock-stat-label{font-size:10px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;font-weight:600}
+.mock-stat-value{font-family:var(--display);font-style:italic;font-size:26px;line-height:1;color:var(--ink);letter-spacing:-0.02em}
+.mock-stat-value .up{color:var(--green);font-size:12px;font-family:var(--sans);font-style:normal;font-weight:600;margin-left:4px;vertical-align:middle}
+.mock-stat-change{font-size:11px;color:var(--ink-mute);margin-top:4px}
+.mock-stat-change .pos{color:var(--green)}
+
+.mock-review-notif{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(167,139,250,0.2);
+  border-radius:14px;padding:14px 16px;
+  display:flex;align-items:center;gap:12px;
+  position:relative;overflow:hidden;
+}
+.mock-review-notif::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(167,139,250,0.3),transparent);
+}
+.mock-notif-icon{
+  width:34px;height:34px;border-radius:10px;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(167,139,250,0.2),rgba(124,147,255,0.15));
+  border:1px solid rgba(167,139,250,0.25);
+  display:flex;align-items:center;justify-content:center;font-size:16px;
+}
+.mock-notif-body{flex:1;min-width:0}
+.mock-notif-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.mock-notif-title{font-size:12px;font-weight:600;letter-spacing:-0.01em}
+.mock-notif-time{font-size:10px;color:var(--ink-mute)}
+.mock-notif-text{font-size:12px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-stars{color:var(--amber);font-size:10px;letter-spacing:2px;margin-top:2px}
+
+.mock-bar-section{
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--glass-border);
+  border-radius:14px;padding:14px 16px;
+}
+.mock-bar-label{font-size:10px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.mock-bar-label span{color:var(--accent);font-size:11px;letter-spacing:0}
+.mock-bars{display:flex;flex-direction:column;gap:7px}
+.mock-bar-row{display:flex;align-items:center;gap:9px}
+.mock-bar-name{font-size:11px;color:var(--ink-soft);width:60px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-bar-track{flex:1;height:5px;background:rgba(255,255,255,0.06);border-radius:100px;overflow:hidden}
+.mock-bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.mock-bar-val{font-size:10px;color:var(--ink-mute);width:26px;text-align:right;flex-shrink:0}
+
+/* SECTIONS */
 .section{padding:120px 32px;max-width:1100px;margin:0 auto;position:relative}
 .section-tag{
   font-family:var(--sans);font-size:11px;font-weight:600;
@@ -392,7 +388,7 @@ nav{
 .section-head-center .section-title,
 .section-head-center .section-sub{margin-left:auto;margin-right:auto}
  
-/* === PROBLEM CARDS === */
+/* PROBLEM CARDS */
 .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .problem-card{
   background:var(--glass-bg-2);
@@ -421,16 +417,10 @@ nav{
   -webkit-text-fill-color:transparent;
   margin-bottom:20px;display:block;
 }
-.problem-card h3{
-  font-size:21px;font-weight:600;
-  letter-spacing:-0.02em;margin-bottom:10px;
-}
-.problem-card p{
-  font-size:14px;color:var(--ink-soft);
-  line-height:1.6;letter-spacing:-0.005em;
-}
+.problem-card h3{font-size:21px;font-weight:600;letter-spacing:-0.02em;margin-bottom:10px}
+.problem-card p{font-size:14px;color:var(--ink-soft);line-height:1.6;letter-spacing:-0.005em}
  
-/* === SOLUTION === */
+/* SOLUTION */
 .solution-block{
   background:var(--glass-bg-2);
   backdrop-filter:blur(32px) saturate(180%);
@@ -463,7 +453,7 @@ nav{
 .solution-feat h4{font-size:15px;font-weight:600;margin-bottom:4px;letter-spacing:-0.01em}
 .solution-feat p{font-size:13.5px;color:var(--ink-soft);line-height:1.5}
  
-/* === PRICING === */
+/* PRICING */
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
 .price-card{
   background:var(--glass-bg-2);
@@ -487,9 +477,7 @@ nav{
   transform:scale(1.03);
   box-shadow:0 1px 0 rgba(255,255,255,0.1) inset, 0 30px 60px -20px rgba(167,139,250,0.25);
 }
-.price-card.featured::before{
-  background:linear-gradient(90deg,transparent,var(--accent),transparent);
-}
+.price-card.featured::before{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
 .price-card.featured:hover{transform:scale(1.03) translateY(-4px)}
 .price-badge{
   position:absolute;top:18px;right:18px;
@@ -499,32 +487,15 @@ nav{
   color:#fff;letter-spacing:0.06em;text-transform:uppercase;
   box-shadow:0 4px 12px var(--accent-glow);
 }
-.price-name{
-  font-size:13px;font-weight:600;
-  color:var(--accent);letter-spacing:0.08em;
-  text-transform:uppercase;margin-bottom:14px;
-}
+.price-name{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px}
 .price-card.base .price-name{color:var(--ink-soft)}
 .price-card.premium .price-name{color:var(--accent2)}
-.price-headline{
-  font-family:var(--display);font-style:italic;font-weight:400;
-  font-size:22px;line-height:1.2;
-  margin-bottom:24px;color:var(--ink);
-  letter-spacing:-0.01em;
-}
+.price-headline{font-family:var(--display);font-style:italic;font-weight:400;font-size:22px;line-height:1.2;margin-bottom:24px;color:var(--ink);letter-spacing:-0.01em}
 .price-value{margin-bottom:8px;display:flex;align-items:baseline;gap:6px}
-.price-amount{
-  font-family:var(--display);font-style:italic;
-  font-size:54px;font-weight:400;line-height:1;
-  letter-spacing:-0.04em;
-}
+.price-amount{font-family:var(--display);font-style:italic;font-size:54px;font-weight:400;line-height:1;letter-spacing:-0.04em}
 .price-curr{font-size:24px;color:var(--ink-soft);font-family:var(--display);font-style:italic}
 .price-period{font-size:13px;color:var(--ink-mute);margin-bottom:8px;letter-spacing:-0.005em}
-.price-monthly{
-  font-size:13px;color:var(--ink-soft);
-  padding-bottom:24px;margin-bottom:24px;
-  border-bottom:1px solid var(--hairline);
-}
+.price-monthly{font-size:13px;color:var(--ink-soft);padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--hairline)}
 .price-monthly strong{color:var(--ink);font-weight:600}
 .price-features{list-style:none;margin-bottom:28px;flex:1;display:flex;flex-direction:column;gap:11px}
 .price-features li{
@@ -541,11 +512,7 @@ nav{
   background-size:10px;background-position:center;background-repeat:no-repeat;
 }
 .price-features li.muted{color:var(--ink-mute)}
-.price-features li.muted::before{
-  background:transparent;
-  border-color:var(--ink-faint);
-  background-image:none;
-}
+.price-features li.muted::before{background:transparent;border-color:var(--ink-faint);background-image:none}
 .price-cta{
   display:block;width:100%;text-align:center;
   padding:13px 20px;border-radius:100px;
@@ -562,12 +529,9 @@ nav{
   box-shadow:0 8px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.5);
 }
 .price-card.featured .price-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.6)}
-.price-note{
-  text-align:center;font-size:13px;color:var(--ink-mute);
-  margin-top:32px;letter-spacing:-0.005em;
-}
+.price-note{text-align:center;font-size:13px;color:var(--ink-mute);margin-top:32px;letter-spacing:-0.005em}
  
-/* === HOW IT WORKS === */
+/* HOW IT WORKS */
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step-card{
   background:var(--glass-bg-2);
@@ -579,64 +543,26 @@ nav{
   transition:all .4s;
   box-shadow:0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 40px -20px rgba(0,0,0,0.5);
 }
-.step-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent);
-}
+.step-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.15),transparent)}
 .step-card:hover{transform:translateY(-4px);border-color:var(--glass-border-2)}
-.step-num{
-  font-family:var(--display);font-style:italic;
-  font-weight:400;font-size:42px;line-height:1;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:20px;display:block;
-}
-.step-card h3{
-  font-size:19px;font-weight:600;
-  letter-spacing:-0.02em;margin-bottom:10px;
-}
+.step-num{font-family:var(--display);font-style:italic;font-weight:400;font-size:42px;line-height:1;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px;display:block}
+.step-card h3{font-size:19px;font-weight:600;letter-spacing:-0.02em;margin-bottom:10px}
 .step-card p{font-size:14px;color:var(--ink-soft);line-height:1.6}
  
-/* === FEATURED QUOTE === */
-.feat-quote{
-  text-align:center;
-  max-width:780px;margin:0 auto;
-  padding:100px 32px;
-  position:relative;
-}
+/* FEATURED QUOTE */
+.feat-quote{text-align:center;max-width:780px;margin:0 auto;padding:100px 32px;position:relative}
 .feat-quote::before{
-  content:'"';
-  font-family:var(--display);font-style:italic;
+  content:'"';font-family:var(--display);font-style:italic;
   font-size:200px;color:rgba(167,139,250,0.08);
-  position:absolute;top:30px;left:50%;
-  transform:translateX(-50%);line-height:1;
-  pointer-events:none;
+  position:absolute;top:30px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;
 }
-.feat-stars{
-  color:var(--amber);font-size:14px;
-  letter-spacing:4px;margin-bottom:24px;
-  display:inline-block;
-}
-.feat-q{
-  font-family:var(--display);font-style:italic;font-weight:400;
-  font-size:clamp(24px,3.5vw,40px);
-  line-height:1.25;letter-spacing:-0.02em;
-}
-.feat-q em{
-  font-style:normal;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  font-family:var(--display);font-style:italic;
-}
-.feat-attr{
-  font-size:14px;color:var(--ink-mute);
-  margin-top:28px;letter-spacing:-0.005em;
-}
+.feat-stars{color:var(--amber);font-size:14px;letter-spacing:4px;margin-bottom:24px;display:inline-block}
+.feat-q{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(24px,3.5vw,40px);line-height:1.25;letter-spacing:-0.02em}
+.feat-q em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-family:var(--display);font-style:italic}
+.feat-attr{font-size:14px;color:var(--ink-mute);margin-top:28px;letter-spacing:-0.005em}
 .feat-attr strong{color:var(--ink);font-weight:600}
  
-/* === REVIEWS === */
+/* REVIEWS */
 .reviews-section{padding:100px 0;border-top:1px solid var(--hairline);overflow:hidden;background:rgba(3,3,8,0.4)}
 .reviews-head{max-width:1100px;margin:0 auto 56px;padding:0 32px}
 .carousel-row{overflow:hidden;width:100%;margin-bottom:16px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -658,59 +584,27 @@ nav{
 }
 .rev-card:hover{transform:translateY(-3px);border-color:var(--glass-border-2)}
 .rev-stars{color:var(--amber);font-size:12px;letter-spacing:3px;margin-bottom:12px}
-.rev-text{
-  font-size:14px;color:var(--ink-soft);
-  line-height:1.6;margin-bottom:18px;
-  letter-spacing:-0.005em;
-  font-family:var(--display);font-style:italic;font-weight:400;
-  font-size:15.5px;
-}
+.rev-text{font-family:var(--display);font-style:italic;font-weight:400;font-size:15.5px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px;letter-spacing:-0.005em}
 .rev-auth{display:flex;align-items:center;gap:11px}
-.rev-av{
-  width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  display:flex;align-items:center;justify-content:center;
-  font-size:12px;font-weight:600;color:#fff;flex-shrink:0;
-  box-shadow:0 4px 12px var(--accent-glow);
-}
+.rev-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#fff;flex-shrink:0;box-shadow:0 4px 12px var(--accent-glow)}
 .rev-name{font-size:13px;font-weight:600;letter-spacing:-0.01em}
 .rev-role{font-size:11.5px;color:var(--ink-mute);margin-top:1px}
  
-/* === FAQ === */
+/* FAQ */
 .faq-list{max-width:760px;margin:0 auto}
-.faq-item{
-  background:var(--glass-bg-2);
-  backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);
-  border-radius:18px;margin-bottom:10px;
-  overflow:hidden;transition:all .3s;
-  box-shadow:0 1px 0 rgba(255,255,255,0.06) inset;
-}
+.faq-item{background:var(--glass-bg-2);backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:18px;margin-bottom:10px;overflow:hidden;transition:all .3s;box-shadow:0 1px 0 rgba(255,255,255,0.06) inset}
 .faq-item:hover{border-color:var(--glass-border-2);background:var(--glass-bg-3)}
 .faq-item.open{border-color:rgba(167,139,250,0.25);background:var(--glass-bg-3)}
-.faq-q{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:22px 28px;cursor:pointer;
-  font-size:16px;font-weight:500;user-select:none;
-  letter-spacing:-0.01em;
-}
-.faq-arrow{
-  font-size:22px;color:var(--ink-mute);
-  transition:all .3s;flex-shrink:0;margin-left:14px;
-  font-weight:300;
-}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;cursor:pointer;font-size:16px;font-weight:500;user-select:none;letter-spacing:-0.01em}
+.faq-arrow{font-size:22px;color:var(--ink-mute);transition:all .3s;flex-shrink:0;margin-left:14px;font-weight:300}
 .faq-item.open .faq-arrow{transform:rotate(45deg);color:var(--accent)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.2,.7,.3,1)}
 .faq-item.open .faq-a{max-height:400px}
 .faq-a-inner{padding:0 28px 24px}
 .faq-a-inner p{font-size:14.5px;color:var(--ink-soft);line-height:1.65;letter-spacing:-0.005em}
  
-/* === CTA === */
-.cta-section{
-  text-align:center;max-width:900px;
-  margin:60px auto;padding:80px 40px;
-  position:relative;
-}
+/* CTA */
+.cta-section{text-align:center;max-width:900px;margin:60px auto;padding:80px 40px;position:relative}
 .cta-block{
   background:var(--glass-bg-2);
   backdrop-filter:blur(32px) saturate(180%);
@@ -720,42 +614,17 @@ nav{
   position:relative;overflow:hidden;
   box-shadow:0 1px 0 rgba(255,255,255,0.06) inset, 0 30px 80px -30px rgba(0,0,0,0.7);
 }
-.cta-block::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(167,139,250,0.4),transparent);
-}
-.cta-block::after{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at top, rgba(167,139,250,0.12), transparent 60%);
-  pointer-events:none;
-}
+.cta-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(167,139,250,0.4),transparent)}
+.cta-block::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top, rgba(167,139,250,0.12), transparent 60%);pointer-events:none}
 .cta-content{position:relative;z-index:2}
-.cta-block h2{
-  font-size:clamp(30px,4vw,46px);
-  font-weight:500;line-height:1.05;
-  letter-spacing:-0.03em;margin-bottom:18px;
-}
-.cta-block h2 i{
-  font-family:var(--display);font-style:italic;font-weight:400;
-  background:linear-gradient(135deg,#fff,var(--accent));
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-.cta-block p{
-  font-size:16px;color:var(--ink-soft);
-  margin-bottom:32px;max-width:480px;
-  margin-left:auto;margin-right:auto;
-  letter-spacing:-0.005em;
-}
+.cta-block h2{font-size:clamp(30px,4vw,46px);font-weight:500;line-height:1.05;letter-spacing:-0.03em;margin-bottom:18px}
+.cta-block h2 i{font-family:var(--display);font-style:italic;font-weight:400;background:linear-gradient(135deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cta-block p{font-size:16px;color:var(--ink-soft);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto;letter-spacing:-0.005em}
 .cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .cta-note{font-size:13px;color:var(--ink-mute);margin-top:24px;letter-spacing:-0.005em}
  
-/* === FOOTER === */
-footer{
-  border-top:1px solid var(--hairline);
-  padding:48px 32px 32px;
-  max-width:1100px;margin:0 auto;
-}
+/* FOOTER */
+footer{border-top:1px solid var(--hairline);padding:48px 32px 32px;max-width:1100px;margin:0 auto}
 .ft-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:36px}
 .ft-brand{display:flex;flex-direction:column;gap:14px;max-width:280px}
 .ft-brand-line{display:flex;align-items:center;gap:10px}
@@ -771,21 +640,19 @@ footer{
 .ft-social{display:flex;align-items:center;gap:6px;color:var(--ink-soft);font-size:13px;transition:color .2s}
 .ft-social:hover{color:var(--accent)}
  
-/* === ANIMS === */
-@keyframes up{
-  from{opacity:0;transform:translateY(28px)}
-  to{opacity:1;transform:translateY(0)}
-}
+/* ANIMS */
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1)}
 .rv.vis{opacity:1;transform:translateY(0)}
  
-/* === RESPONSIVE === */
+/* RESPONSIVE */
 @media(max-width:900px){
   .problem-grid,.steps-grid{grid-template-columns:1fr}
   .pricing-grid{grid-template-columns:1fr;gap:14px}
   .price-card.featured{transform:none}
   .price-card.featured:hover{transform:translateY(-4px)}
   .solution-inner{grid-template-columns:1fr;gap:36px}
+  .mock-stat-row{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   nav{top:10px;padding:6px 6px 6px 12px;gap:2px}
@@ -812,7 +679,7 @@ footer{
 <nav>
   <div class="nav-brand">
     <div class="nav-mark">S</div>
-    <div class="nav-name">Stratus <i>Connect</i></div>
+    <div class="nav-name">Stratus</div>
   </div>
   <div class="nav-links">
     <a class="nav-link" href="#problema" data-pt="O Problema" data-en="The Problem">O Problema</a>
@@ -834,16 +701,16 @@ footer{
     <span class="pulse"></span>
     <span data-pt="Apenas 5 vagas disponíveis este mês" data-en="Only 5 slots available this month">Apenas 5 vagas disponíveis este mês</span>
   </div>
-  <h1 data-pt='A sua barbearia perde clientes <i>todos os dias.</i><br>Nós resolvemos isso.' data-en='Your barbershop loses clients <i>every day.</i><br>We fix it.'>A sua barbearia perde clientes <i>todos os dias.</i><br>Nós resolvemos isso.</h1>
-  <p class="hero-sub" data-pt="Stratus Connect é a presença digital completa para barbearias, salões e clínicas. Site, Google, WhatsApp automático e mais clientes — tudo num só pacote." data-en="Stratus Connect is the complete digital presence for barbershops, salons and clinics. Website, Google, automatic WhatsApp and more clients — all in one package.">Stratus Connect é a presença digital completa para barbearias, salões e clínicas. Site, Google, WhatsApp automático e mais clientes — tudo num só pacote.</p>
+  <h1 data-pt='O seu negócio perde clientes <i>todos os dias.</i><br>Nós resolvemos isso.' data-en='Your business loses clients <i>every day.</i><br>We fix it.'>O seu negócio perde clientes <i>todos os dias.</i><br>Nós resolvemos isso.</h1>
+  <p class="hero-sub" data-pt="Stratus é a presença digital completa para barbearias, salões e clínicas. Site, Google, Instagram e reviews automáticas — tudo num só pacote." data-en="Stratus is the complete digital presence for barbershops, salons and clinics. Website, Google, Instagram and automatic reviews — all in one package.">Stratus é a presença digital completa para barbearias, salões e clínicas. Site, Google, Instagram e reviews automáticas — tudo num só pacote.</p>
   <div class="hero-actions">
     <a class="btn-p" href="#cta" data-pt="Reservar a Minha Vaga →" data-en="Book My Slot →">Reservar a Minha Vaga →</a>
     <a class="btn-g" href="#precos" data-pt="Ver Planos" data-en="See Plans">Ver Planos</a>
   </div>
   <div class="hero-meta">
     <div class="hero-meta-item">
-      <div class="hero-meta-num"><span>24</span>/7</div>
-      <div class="hero-meta-lbl" data-pt="Atendimento automático" data-en="Auto answering">Atendimento automático</div>
+      <div class="hero-meta-num">Top <span>3</span></div>
+      <div class="hero-meta-lbl" data-pt="Google Maps local" data-en="Local Google Maps">Google Maps local</div>
     </div>
     <div class="hero-meta-item">
       <div class="hero-meta-num">7 <span>dias</span></div>
@@ -851,31 +718,69 @@ footer{
     </div>
     <div class="hero-meta-item">
       <div class="hero-meta-num">3<span>×</span></div>
-      <div class="hero-meta-lbl" data-pt="Mais marcações" data-en="More bookings">Mais marcações</div>
+      <div class="hero-meta-lbl" data-pt="Mais reviews Google" data-en="More Google reviews">Mais reviews Google</div>
     </div>
   </div>
  
-  <!-- MOCKUP -->
+  <!-- RESULTS MOCKUP -->
   <div class="mockup-wrap" id="mockupWrap">
     <div class="mockup" id="mockup">
-      <div class="wa-header">
-        <div class="wa-avatar">✂️</div>
-        <div>
-          <div class="wa-name">Miguel — Barbearia Central</div>
-          <div class="wa-status" data-pt="Online — responde em 3s" data-en="Online — replies in 3s">Online — responde em 3s</div>
+      <div class="mock-header">
+        <div class="mock-header-left">
+          <div class="mock-logo">S</div>
+          <div>
+            <div class="mock-title">Stratus — Resultados</div>
+            <div class="mock-sub" data-pt="A atualizar em tempo real" data-en="Updating in real time">A atualizar em tempo real</div>
+          </div>
         </div>
+        <div class="mock-period" data-pt="Últimos 90 dias" data-en="Last 90 days">Últimos 90 dias</div>
       </div>
-      <div class="wa-body">
-        <div class="wa-msg wa-bot">Olá! Sou o Miguel da Barbearia Central. Em que posso ajudar? ✂️</div>
-        <div class="wa-msg wa-user">Boa, quero marcar corte para sábado</div>
-        <div class="wa-msg wa-bot">Claro! Tenho disponibilidade às <strong>10h30</strong>, <strong>14h00</strong> ou <strong>17h45</strong>. Qual prefere?</div>
-        <div class="wa-msg wa-user">17h45 está bom</div>
-        <div class="wa-msg wa-bot">Marcado! ✅ Sábado, 17h45 — corte com o João. Qual é o seu nome?<div class="wa-time">agora</div></div>
-        <div class="wa-typing"><div class="wa-dot"></div><div class="wa-dot"></div><div class="wa-dot"></div></div>
-      </div>
-      <div class="wa-input">
-        <div class="wa-input-field" data-pt="Escreva uma mensagem..." data-en="Type a message...">Escreva uma mensagem...</div>
-        <div class="wa-send">→</div>
+      <div class="mock-body">
+        <div class="mock-stat-row">
+          <div class="mock-stat">
+            <div class="mock-stat-label" data-pt="Reviews Google" data-en="Google Reviews">Reviews Google</div>
+            <div class="mock-stat-value">87<span class="up">↑</span></div>
+            <div class="mock-stat-change"><span class="pos" data-pt="+64 este trimestre" data-en="+64 this quarter">+64 este trimestre</span></div>
+          </div>
+          <div class="mock-stat">
+            <div class="mock-stat-label" data-pt="Posição Maps" data-en="Maps Position">Posição Maps</div>
+            <div class="mock-stat-value">#<span style="color:var(--accent)">2</span></div>
+            <div class="mock-stat-change"><span class="pos" data-pt="Zona de Setúbal" data-en="Setúbal area">Zona de Setúbal</span></div>
+          </div>
+        </div>
+
+        <div class="mock-review-notif">
+          <div class="mock-notif-icon">⭐</div>
+          <div class="mock-notif-body">
+            <div class="mock-notif-top">
+              <div class="mock-notif-title" data-pt="Nova review recebida" data-en="New review received">Nova review recebida</div>
+              <div class="mock-notif-time">agora</div>
+            </div>
+            <div class="mock-notif-text" data-pt="&quot;Excelente serviço, recomendo a todos!&quot;" data-en="&quot;Excellent service, I recommend to everyone!&quot;">"Excelente serviço, recomendo a todos!"</div>
+            <div class="mock-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="mock-bar-section">
+          <div class="mock-bar-label"><span data-pt="Origem dos clientes novos" data-en="New client sources">Origem dos clientes novos</span><span data-pt="+34% vs. mês anterior" data-en="+34% vs. last month">+34% vs. mês anterior</span></div>
+          <div class="mock-bars">
+            <div class="mock-bar-row">
+              <div class="mock-bar-name">Google</div>
+              <div class="mock-bar-track"><div class="mock-bar-fill" style="width:78%"></div></div>
+              <div class="mock-bar-val">78%</div>
+            </div>
+            <div class="mock-bar-row">
+              <div class="mock-bar-name">Instagram</div>
+              <div class="mock-bar-track"><div class="mock-bar-fill" style="width:54%"></div></div>
+              <div class="mock-bar-val">54%</div>
+            </div>
+            <div class="mock-bar-row">
+              <div class="mock-bar-name" data-pt="Referências" data-en="Referrals">Referências</div>
+              <div class="mock-bar-track"><div class="mock-bar-fill" style="width:32%"></div></div>
+              <div class="mock-bar-val">32%</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -885,24 +790,24 @@ footer{
 <section class="section" id="problema">
   <div class="section-head-center">
     <div class="section-tag rv" data-pt="O Problema" data-en="The Problem">O Problema</div>
-    <h2 class="section-title rv" data-pt='Cada chamada perdida é <i>um cliente</i> que foi à concorrência.' data-en='Every missed call is <i>a client</i> who went to the competition.'>Cada chamada perdida é <i>um cliente</i> que foi à concorrência.</h2>
-    <p class="section-sub rv" data-pt="A maioria dos negócios locais perde 30-40% das oportunidades por estarem ocupados, fechados, ou invisíveis no Google." data-en="Most local businesses lose 30-40% of opportunities because they're busy, closed, or invisible on Google.">A maioria dos negócios locais perde 30-40% das oportunidades por estarem ocupados, fechados, ou invisíveis no Google.</p>
+    <h2 class="section-title rv" data-pt='Cada pesquisa no Google é um cliente <i>que vai à concorrência.</i>' data-en='Every Google search is a client <i>going to the competition.</i>'>Cada pesquisa no Google é um cliente <i>que vai à concorrência.</i></h2>
+    <p class="section-sub rv" data-pt="A maioria dos negócios locais perde 30-40% das oportunidades por estarem invisíveis online, sem reviews, e com presença fraca nas redes sociais." data-en="Most local businesses lose 30-40% of opportunities by being invisible online, with no reviews, and weak social media presence.">A maioria dos negócios locais perde 30-40% das oportunidades por estarem invisíveis online, sem reviews, e com presença fraca nas redes sociais.</p>
   </div>
   <div class="problem-grid">
     <div class="problem-card rv">
       <span class="problem-num">01</span>
-      <h3 data-pt="Ninguém atende" data-en="Nobody answers">Ninguém atende</h3>
-      <p data-pt="Está a cortar, em consulta ou fechado. O cliente liga, ninguém atende — e em 30 segundos já está a ligar para o próximo." data-en="You're cutting hair, in consultation or closed. The client calls, no one answers — and in 30 seconds they're calling the next place.">Está a cortar, em consulta ou fechado. O cliente liga, ninguém atende — e em 30 segundos já está a ligar para o próximo.</p>
+      <h3 data-pt="Invisível no Google" data-en="Invisible on Google">Invisível no Google</h3>
+      <p data-pt="Sem site profissional, sem ficha do Google Maps otimizada. O cliente pesquisa, não vê o seu negócio — e o dinheiro vai para o concorrente que está no top 3." data-en="No professional website, no optimized Google Maps listing. The client searches, doesn't see your business — and the money goes to the competitor in the top 3.">Sem site profissional, sem ficha do Google Maps otimizada. O cliente pesquisa, não vê o seu negócio — e o dinheiro vai para o concorrente que está no top 3.</p>
     </div>
     <div class="problem-card rv">
       <span class="problem-num">02</span>
-      <h3 data-pt="Invisível no Google" data-en="Invisible on Google">Invisível no Google</h3>
-      <p data-pt="Sem site profissional, sem ficha no Google Maps atualizada, sem reviews. Quem procura, simplesmente não vos encontra." data-en="No professional website, no updated Google Maps listing, no reviews. Whoever searches simply can't find you.">Sem site profissional, sem ficha no Google Maps atualizada, sem reviews. Quem procura, simplesmente não vos encontra.</p>
+      <h3 data-pt="Sem reviews, sem confiança" data-en="No reviews, no trust">Sem reviews, sem confiança</h3>
+      <p data-pt="90% dos clientes verificam as reviews antes de marcar. Se tiver menos de 4.5 estrelas ou menos de 20 reviews, muitos passam à frente sem pensar duas vezes." data-en="90% of clients check reviews before booking. If you have less than 4.5 stars or fewer than 20 reviews, many skip past without a second thought.">90% dos clientes verificam as reviews antes de marcar. Se tiver menos de 4.5 estrelas ou menos de 20 reviews, muitos passam à frente sem pensar duas vezes.</p>
     </div>
     <div class="problem-card rv">
       <span class="problem-num">03</span>
-      <h3 data-pt="Tempo desperdiçado" data-en="Wasted time">Tempo desperdiçado</h3>
-      <p data-pt="Horas perdidas a responder a 'quanto custa?', 'a que horas abrem?', a confirmar marcações por mensagem. Trabalho que ninguém vê." data-en="Hours wasted answering 'how much does it cost?', 'what time do you open?', confirming bookings by message. Work nobody sees.">Horas perdidas a responder a 'quanto custa?', 'a que horas abrem?', a confirmar marcações por mensagem. Trabalho que ninguém vê.</p>
+      <h3 data-pt="Instagram a desperdiçar alcance" data-en="Instagram wasting reach">Instagram a desperdiçar alcance</h3>
+      <p data-pt="Perfil sem otimização, sem consistência, sem estratégia. O Instagram pode ser o maior canal de aquisição local — mas só se estiver bem feito." data-en="Profile without optimization, consistency, or strategy. Instagram can be the biggest local acquisition channel — but only if it's done right.">Perfil sem otimização, sem consistência, sem estratégia. O Instagram pode ser o maior canal de aquisição local — mas só se estiver bem feito.</p>
     </div>
   </div>
 </section>
@@ -914,7 +819,7 @@ footer{
       <div>
         <div class="section-tag" data-pt="A Solução" data-en="The Solution">A Solução</div>
         <h2 class="section-title" style="margin-bottom:18px" data-pt='Um sistema que <i>trabalha por si.</i>' data-en='A system that <i>works for you.</i>'>Um sistema que <i>trabalha por si.</i></h2>
-        <p style="font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:32px" data-pt="Stratus Connect combina tudo o que um negócio local precisa para parar de perder clientes e começar a crescer — sem ter de aprender nada novo." data-en="Stratus Connect combines everything a local business needs to stop losing clients and start growing — without having to learn anything new.">Stratus Connect combina tudo o que um negócio local precisa para parar de perder clientes e começar a crescer — sem ter de aprender nada novo.</p>
+        <p style="font-size:15px;color:var(--ink-soft);line-height:1.6;margin-bottom:32px" data-pt="Stratus combina tudo o que um negócio local precisa para parar de perder clientes e começar a crescer — sem ter de aprender nada novo." data-en="Stratus combines everything a local business needs to stop losing clients and start growing — without having to learn anything new.">Stratus combina tudo o que um negócio local precisa para parar de perder clientes e começar a crescer — sem ter de aprender nada novo.</p>
       </div>
       <div class="solution-features">
         <div class="solution-feat">
@@ -925,24 +830,24 @@ footer{
           </div>
         </div>
         <div class="solution-feat">
-          <div class="solution-feat-icon">🤖</div>
-          <div>
-            <h4 data-pt="Assistente IA no WhatsApp" data-en="AI Assistant on WhatsApp">Assistente IA no WhatsApp</h4>
-            <p data-pt="Atende 24/7, marca, responde dúvidas, fala português natural. Nunca perde uma mensagem." data-en="24/7, books, answers questions, speaks natural Portuguese. Never misses a message.">Atende 24/7, marca, responde dúvidas, fala português natural. Nunca perde uma mensagem.</p>
-          </div>
-        </div>
-        <div class="solution-feat">
           <div class="solution-feat-icon">📍</div>
           <div>
             <h4 data-pt="Google Business otimizado" data-en="Optimized Google Business">Google Business otimizado</h4>
-            <p data-pt="Fotos, horários, descrição, palavras-chave. Aparece quando alguém procura no Maps." data-en="Photos, hours, description, keywords. Shows up when someone searches on Maps.">Fotos, horários, descrição, palavras-chave. Aparece quando alguém procura no Maps.</p>
+            <p data-pt="Fotos, horários, descrição, palavras-chave. Aparece quando alguém pesquisa no Maps — e aparece bem." data-en="Photos, hours, description, keywords. Shows up when someone searches on Maps — and shows up well.">Fotos, horários, descrição, palavras-chave. Aparece quando alguém pesquisa no Maps — e aparece bem.</p>
           </div>
         </div>
         <div class="solution-feat">
           <div class="solution-feat-icon">⭐</div>
           <div>
             <h4 data-pt="Reviews automáticas" data-en="Automatic reviews">Reviews automáticas</h4>
-            <p data-pt="Depois de cada serviço, o cliente recebe pedido automático de review. Mais reviews = mais clientes." data-en="After each service, the client gets an automatic review request. More reviews = more clients.">Depois de cada serviço, o cliente recebe pedido automático de review. Mais reviews = mais clientes.</p>
+            <p data-pt="Depois de cada serviço, o cliente recebe pedido automático de review. Mais reviews = mais confiança = mais clientes." data-en="After each service, the client gets an automatic review request. More reviews = more trust = more clients.">Depois de cada serviço, o cliente recebe pedido automático de review. Mais reviews = mais confiança = mais clientes.</p>
+          </div>
+        </div>
+        <div class="solution-feat">
+          <div class="solution-feat-icon">📸</div>
+          <div>
+            <h4 data-pt="Instagram otimizado" data-en="Optimized Instagram">Instagram otimizado</h4>
+            <p data-pt="Bio, destaques, hashtags e publicações consistentes. Transforma o perfil num canal de aquisição real." data-en="Bio, highlights, hashtags and consistent posts. Turns the profile into a real acquisition channel.">Bio, destaques, hashtags e publicações consistentes. Transforma o perfil num canal de aquisição real.</p>
           </div>
         </div>
       </div>
@@ -960,7 +865,7 @@ footer{
   <div class="pricing-grid">
     <!-- BASE -->
     <div class="price-card base rv">
-      <div class="price-name">Connect Base</div>
+      <div class="price-name">Base</div>
       <div class="price-headline" data-pt="Para começar com presença digital decente." data-en="To start with a decent digital presence.">Para começar com presença digital decente.</div>
       <div class="price-value">
         <span class="price-curr">€</span><span class="price-amount">450</span>
@@ -971,16 +876,16 @@ footer{
         <li data-pt="Site profissional (até 5 secções)" data-en="Professional website (up to 5 sections)">Site profissional (até 5 secções)</li>
         <li data-pt="Otimização Google Business" data-en="Google Business optimization">Otimização Google Business</li>
         <li data-pt="Formulário de contacto" data-en="Contact form">Formulário de contacto</li>
-        <li data-pt="Manutenção e alterações" data-en="Maintenance and changes">Manutenção e alterações</li>
-        <li class="muted" data-pt="Assistente IA WhatsApp" data-en="AI WhatsApp assistant">Assistente IA WhatsApp</li>
+        <li data-pt="Manutenção e alterações mensais" data-en="Monthly maintenance and changes">Manutenção e alterações mensais</li>
         <li class="muted" data-pt="Reviews automáticas" data-en="Automatic reviews">Reviews automáticas</li>
+        <li class="muted" data-pt="Otimização Instagram" data-en="Instagram optimization">Otimização Instagram</li>
       </ul>
       <a class="price-cta" href="#cta" data-pt="Quero o Base" data-en="I want Base">Quero o Base</a>
     </div>
     <!-- PRO -->
     <div class="price-card featured rv">
       <span class="price-badge" data-pt="Mais Popular" data-en="Most Popular">Mais Popular</span>
-      <div class="price-name">Connect Pro</div>
+      <div class="price-name">Pro</div>
       <div class="price-headline" data-pt="O combo que para de perder clientes." data-en="The combo that stops losing clients.">O combo que para de perder clientes.</div>
       <div class="price-value">
         <span class="price-curr">€</span><span class="price-amount">650</span>
@@ -989,17 +894,17 @@ footer{
       <div class="price-monthly"><strong>€180</strong> <span data-pt="por mês" data-en="per month">por mês</span></div>
       <ul class="price-features">
         <li data-pt="Tudo do plano Base" data-en="Everything in Base">Tudo do plano Base</li>
-        <li data-pt="Assistente IA no WhatsApp 24/7" data-en="AI Assistant on WhatsApp 24/7">Assistente IA no WhatsApp 24/7</li>
-        <li data-pt="Marcações automáticas" data-en="Automatic bookings">Marcações automáticas</li>
-        <li data-pt="Resumo diário das conversas" data-en="Daily conversation summary">Resumo diário das conversas</li>
-        <li data-pt="Integração com agenda Google" data-en="Google Calendar integration">Integração com agenda Google</li>
-        <li class="muted" data-pt="Reviews + relatórios" data-en="Reviews + reports">Reviews + relatórios</li>
+        <li data-pt="Reviews automáticas após cada serviço" data-en="Automatic reviews after each service">Reviews automáticas após cada serviço</li>
+        <li data-pt="Otimização completa do Instagram" data-en="Complete Instagram optimization">Otimização completa do Instagram</li>
+        <li data-pt="4 publicações mensais no Instagram" data-en="4 monthly Instagram posts">4 publicações mensais no Instagram</li>
+        <li data-pt="Relatório mensal de performance" data-en="Monthly performance report">Relatório mensal de performance</li>
+        <li class="muted" data-pt="Follow-up automático a clientes" data-en="Automatic client follow-up">Follow-up automático a clientes</li>
       </ul>
       <a class="price-cta" href="#cta" data-pt="Quero o Pro" data-en="I want Pro">Quero o Pro</a>
     </div>
     <!-- PREMIUM -->
     <div class="price-card premium rv">
-      <div class="price-name">Connect Premium</div>
+      <div class="price-name">Premium</div>
       <div class="price-headline" data-pt="Para crescer a sério, sem ter de pensar." data-en="To grow seriously, without having to think.">Para crescer a sério, sem ter de pensar.</div>
       <div class="price-value">
         <span class="price-curr">€</span><span class="price-amount">900</span>
@@ -1008,11 +913,11 @@ footer{
       <div class="price-monthly"><strong>€250</strong> <span data-pt="por mês" data-en="per month">por mês</span></div>
       <ul class="price-features">
         <li data-pt="Tudo do plano Pro" data-en="Everything in Pro">Tudo do plano Pro</li>
-        <li data-pt="Follow-up automático a clientes" data-en="Automatic client follow-up">Follow-up automático a clientes</li>
-        <li data-pt="Pedido de reviews automático" data-en="Automatic review requests">Pedido de reviews automático</li>
-        <li data-pt="Relatório mensal de performance" data-en="Monthly performance report">Relatório mensal de performance</li>
+        <li data-pt="8 publicações mensais no Instagram" data-en="8 monthly Instagram posts">8 publicações mensais no Instagram</li>
+        <li data-pt="Follow-up automático a clientes inativos" data-en="Automatic follow-up to inactive clients">Follow-up automático a clientes inativos</li>
         <li data-pt="Suporte prioritário WhatsApp" data-en="Priority WhatsApp support">Suporte prioritário WhatsApp</li>
         <li data-pt="Ajustes ilimitados" data-en="Unlimited adjustments">Ajustes ilimitados</li>
+        <li data-pt="Estratégia de crescimento mensal" data-en="Monthly growth strategy">Estratégia de crescimento mensal</li>
       </ul>
       <a class="price-cta" href="#cta" data-pt="Quero o Premium" data-en="I want Premium">Quero o Premium</a>
     </div>
@@ -1036,12 +941,12 @@ footer{
     <div class="step-card rv">
       <span class="step-num">02</span>
       <h3 data-pt="Construímos tudo" data-en="We build everything">Construímos tudo</h3>
-      <p data-pt="Site, assistente IA, Google Business, integração com agenda. Você só envia logo, fotos e informação básica." data-en="Website, AI assistant, Google Business, calendar integration. You just send logo, photos and basic info.">Site, assistente IA, Google Business, integração com agenda. Você só envia logo, fotos e informação básica.</p>
+      <p data-pt="Site, Google Business, reviews automáticas, Instagram. Você só envia logo, fotos e informação básica — nós tratamos do resto." data-en="Website, Google Business, automatic reviews, Instagram. You just send logo, photos and basic info — we handle the rest.">Site, Google Business, reviews automáticas, Instagram. Você só envia logo, fotos e informação básica — nós tratamos do resto.</p>
     </div>
     <div class="step-card rv">
       <span class="step-num">03</span>
       <h3 data-pt="Cresce no piloto automático" data-en="Grow on autopilot">Cresce no piloto automático</h3>
-      <p data-pt="Em 7 dias está tudo online a funcionar. O sistema atende, marca, faz follow-up. Você foca no que sabe fazer." data-en="In 7 days everything is online and working. The system answers, books, follows up. You focus on what you do best.">Em 7 dias está tudo online a funcionar. O sistema atende, marca, faz follow-up. Você foca no que sabe fazer.</p>
+      <p data-pt="Em 7 dias está tudo online a funcionar. As reviews chegam sozinhas, o Instagram cresce, o Google trabalha. Você foca no que sabe fazer." data-en="In 7 days everything is online and working. Reviews come in automatically, Instagram grows, Google works. You focus on what you do best.">Em 7 dias está tudo online a funcionar. As reviews chegam sozinhas, o Instagram cresce, o Google trabalha. Você foca no que sabe fazer.</p>
     </div>
   </div>
 </section>
@@ -1049,8 +954,8 @@ footer{
 <!-- FEATURED QUOTE -->
 <div class="feat-quote rv">
   <div class="feat-stars">★ ★ ★ ★ ★</div>
-  <p class="feat-q" data-pt='"O assistente respondeu a um cliente às 23h e marcou consulta para o dia seguinte. <em>Em qualquer outro dia tinha-o perdido.</em>"' data-en='"The assistant replied to a client at 11pm and booked an appointment for the next day. <em>Any other day I would have lost him.</em>"'>"O assistente respondeu a um cliente às 23h e marcou consulta para o dia seguinte. <em>Em qualquer outro dia tinha-o perdido.</em>"</p>
-  <p class="feat-attr"><strong>Dr. Carlos M.</strong> — <span data-pt="Clínica Dentária, Setúbal" data-en="Dental Clinic, Setúbal">Clínica Dentária, Setúbal</span></p>
+  <p class="feat-q" data-pt='"Saltámos de 18 para 94 reviews em 3 meses. O Google passou a enviar-nos <em>clientes novos todos os dias.</em>"' data-en='"We went from 18 to 94 reviews in 3 months. Google started sending us <em>new clients every day.</em>"'>"Saltámos de 18 para 94 reviews em 3 meses. O Google passou a enviar-nos <em>clientes novos todos os dias.</em>"</p>
+  <p class="feat-attr"><strong>Ana P.</strong> — <span data-pt="Salão de Beleza, Setúbal" data-en="Beauty Salon, Setúbal">Salão de Beleza, Setúbal</span></p>
 </div>
  
 <!-- REVIEWS -->
@@ -1060,18 +965,18 @@ footer{
     <h2 class="section-title rv" data-pt='Resultados de <i>negócios reais.</i>' data-en='Results from <i>real businesses.</i>'>Resultados de <i>negócios reais.</i></h2>
   </div>
   <div class="carousel-row"><div class="carousel-track ct-left" id="ct1">
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O Miguel (o nosso assistente IA) respondeu a 47 mensagens só esta semana. 12 viraram clientes." data-en="Miguel (our AI assistant) answered 47 messages just this week. 12 became clients.">O Miguel (o nosso assistente IA) respondeu a 47 mensagens só esta semana. 12 viraram clientes.</p><div class="rev-auth"><div class="rev-av">JS</div><div><div class="rev-name">João S.</div><div class="rev-role" data-pt="Barbearia, Amora" data-en="Barbershop, Amora">Barbearia, Amora</div></div></div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Antes perdia 3-4 marcações por dia. Agora não perco nenhuma. Vale o investimento todo." data-en="Before I lost 3-4 bookings a day. Now I lose none. Worth every cent of the investment.">Antes perdia 3-4 marcações por dia. Agora não perco nenhuma. Vale o investimento todo.</p><div class="rev-auth"><div class="rev-av">AP</div><div><div class="rev-name">Ana P.</div><div class="rev-role" data-pt="Salão de Beleza, Setúbal" data-en="Beauty Salon, Setúbal">Salão de Beleza, Setúbal</div></div></div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="As reviews automáticas mudaram tudo. Saltamos de 23 para 87 reviews no Google em 3 meses." data-en="Automatic reviews changed everything. We jumped from 23 to 87 Google reviews in 3 months.">As reviews automáticas mudaram tudo. Saltamos de 23 para 87 reviews no Google em 3 meses.</p><div class="rev-auth"><div class="rev-av">RM</div><div><div class="rev-name">Rita M.</div><div class="rev-role" data-pt="Centro de Estética, Almada" data-en="Beauty Center, Almada">Centro de Estética, Almada</div></div></div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O melhor é que o cliente nem percebe que é IA. Atende como se fosse uma rececionista de verdade." data-en="The best part is the client doesn't even realize it's AI. Answers like a real receptionist.">O melhor é que o cliente nem percebe que é IA. Atende como se fosse uma rececionista de verdade.</p><div class="rev-auth"><div class="rev-av">FC</div><div><div class="rev-name">Fábio C.</div><div class="rev-role" data-pt="Clínica de Fisioterapia, Barreiro" data-en="Physio Clinic, Barreiro">Clínica de Fisioterapia, Barreiro</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="As reviews automáticas mudaram tudo. Saltámos de 23 para 87 reviews no Google em 3 meses." data-en="Automatic reviews changed everything. We jumped from 23 to 87 Google reviews in 3 months.">As reviews automáticas mudaram tudo. Saltámos de 23 para 87 reviews no Google em 3 meses.</p><div class="rev-auth"><div class="rev-av">JS</div><div><div class="rev-name">João S.</div><div class="rev-role" data-pt="Barbearia, Amora" data-en="Barbershop, Amora">Barbearia, Amora</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Antes não aparecia no Google Maps. Agora estou no top 3 da minha zona. Vale o investimento todo." data-en="Before I didn't show up on Google Maps. Now I'm in the top 3 of my area. Worth every cent.">Antes não aparecia no Google Maps. Agora estou no top 3 da minha zona. Vale o investimento todo.</p><div class="rev-auth"><div class="rev-av">AP</div><div><div class="rev-name">Ana P.</div><div class="rev-role" data-pt="Salão de Beleza, Setúbal" data-en="Beauty Salon, Setúbal">Salão de Beleza, Setúbal</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O Instagram estava morto há 2 anos. Agora temos clientes novos a dizer que nos encontraram lá." data-en="Instagram was dead for 2 years. Now we have new clients saying they found us there.">O Instagram estava morto há 2 anos. Agora temos clientes novos a dizer que nos encontraram lá.</p><div class="rev-auth"><div class="rev-av">RM</div><div><div class="rev-name">Rita M.</div><div class="rev-role" data-pt="Centro de Estética, Almada" data-en="Beauty Center, Almada">Centro de Estética, Almada</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O site ficou incrível. Os clientes comentam que nos encontraram no Google por causa do site." data-en="The website turned out incredible. Clients comment they found us on Google because of the website.">O site ficou incrível. Os clientes comentam que nos encontraram no Google por causa do site.</p><div class="rev-auth"><div class="rev-av">FC</div><div><div class="rev-name">Fábio C.</div><div class="rev-role" data-pt="Clínica de Fisioterapia, Barreiro" data-en="Physio Clinic, Barreiro">Clínica de Fisioterapia, Barreiro</div></div></div></div>
     <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Entregaram em 6 dias. Pensava que ia ser uma confusão e foi tudo super simples." data-en="Delivered in 6 days. I thought it would be a mess and it was super simple.">Entregaram em 6 dias. Pensava que ia ser uma confusão e foi tudo super simples.</p><div class="rev-auth"><div class="rev-av">MO</div><div><div class="rev-name">Marta O.</div><div class="rev-role" data-pt="Salão, Seixal" data-en="Salon, Seixal">Salão, Seixal</div></div></div></div>
   </div></div>
   <div class="carousel-row"><div class="carousel-track ct-right" id="ct2">
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Poupei 2 horas por dia a responder ao WhatsApp. Esse tempo agora é meu, não da clínica." data-en="I saved 2 hours a day replying to WhatsApp. That time is mine now, not the clinic's.">Poupei 2 horas por dia a responder ao WhatsApp. Esse tempo agora é meu, não da clínica.</p><div class="rev-auth"><div class="rev-av">CM</div><div><div class="rev-name">Carlos M.</div><div class="rev-role" data-pt="Clínica Dentária, Setúbal" data-en="Dental Clinic, Setúbal">Clínica Dentária, Setúbal</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="As reviews automáticas trouxeram clientes que nunca viriam de outra forma. Só do Google." data-en="The automatic reviews brought clients who would never have come otherwise. Just from Google.">As reviews automáticas trouxeram clientes que nunca viriam de outra forma. Só do Google.</p><div class="rev-auth"><div class="rev-av">CM</div><div><div class="rev-name">Carlos M.</div><div class="rev-role" data-pt="Clínica Dentária, Setúbal" data-en="Dental Clinic, Setúbal">Clínica Dentária, Setúbal</div></div></div></div>
     <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O site ficou 10× melhor do que esperava. E o preço é justo, sem letras pequenas." data-en="The website turned out 10× better than I expected. And the price is fair, no fine print.">O site ficou 10× melhor do que esperava. E o preço é justo, sem letras pequenas.</p><div class="rev-auth"><div class="rev-av">LB</div><div><div class="rev-name">Luís B.</div><div class="rev-role" data-pt="Barbearia, Montijo" data-en="Barbershop, Montijo">Barbearia, Montijo</div></div></div></div>
     <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Comecei a aparecer no Google Maps no top 3 da zona em 2 meses. Não fiz mais nada além de contratar." data-en="I started appearing in Google Maps top 3 in my area in 2 months. Did nothing besides hiring them.">Comecei a aparecer no Google Maps no top 3 da zona em 2 meses. Não fiz mais nada além de contratar.</p><div class="rev-auth"><div class="rev-av">SG</div><div><div class="rev-name">Sofia G.</div><div class="rev-role" data-pt="Estética, Cascais" data-en="Aesthetics, Cascais">Estética, Cascais</div></div></div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O follow-up automático trouxe clientes antigos de volta. Recuperei pessoas que não vinham há 8 meses." data-en="The automatic follow-up brought old clients back. Recovered people who hadn't come in 8 months.">O follow-up automático trouxe clientes antigos de volta. Recuperei pessoas que não vinham há 8 meses.</p><div class="rev-auth"><div class="rev-av">PT</div><div><div class="rev-name">Patrícia T.</div><div class="rev-role" data-pt="Clínica de Fisioterapia, Lisboa" data-en="Physio Clinic, Lisbon">Clínica de Fisioterapia, Lisboa</div></div></div></div>
-    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Não percebo de tecnologia. Eles trataram de tudo, eu só uso o WhatsApp como sempre usei." data-en="I don't understand tech. They handled everything, I just use WhatsApp as I always did.">Não percebo de tecnologia. Eles trataram de tudo, eu só uso o WhatsApp como sempre usei.</p><div class="rev-auth"><div class="rev-av">HR</div><div><div class="rev-name">Helena R.</div><div class="rev-role" data-pt="Salão, Almada" data-en="Salon, Almada">Salão, Almada</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="O Instagram passou de 200 para 800 seguidores em 2 meses. Temos clientes novos todas as semanas." data-en="Instagram went from 200 to 800 followers in 2 months. We get new clients every week.">O Instagram passou de 200 para 800 seguidores em 2 meses. Temos clientes novos todas as semanas.</p><div class="rev-auth"><div class="rev-av">PT</div><div><div class="rev-name">Patrícia T.</div><div class="rev-role" data-pt="Clínica de Fisioterapia, Lisboa" data-en="Physio Clinic, Lisbon">Clínica de Fisioterapia, Lisboa</div></div></div></div>
+    <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-text" data-pt="Não percebo de tecnologia. Eles trataram de tudo, só precisei de enviar as fotos." data-en="I don't understand tech. They handled everything, I just needed to send the photos.">Não percebo de tecnologia. Eles trataram de tudo, só precisei de enviar as fotos.</p><div class="rev-auth"><div class="rev-av">HR</div><div><div class="rev-name">Helena R.</div><div class="rev-role" data-pt="Salão, Almada" data-en="Salon, Almada">Salão, Almada</div></div></div></div>
   </div></div>
 </section>
  
@@ -1082,12 +987,12 @@ footer{
     <h2 class="section-title rv" data-pt='Perguntas <i>frequentes.</i>' data-en='Frequently <i>asked.</i>'>Perguntas <i>frequentes.</i></h2>
   </div>
   <div class="faq-list">
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="Para que tipo de negócios funciona melhor?" data-en="What types of businesses does this work best for?">Para que tipo de negócios funciona melhor?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Stratus Connect foi desenhado especificamente para negócios locais com agendamento — barbearias, salões de cabeleireiro, estética, fisioterapia e clínicas dentárias. Negócios onde uma chamada perdida é literalmente um cliente perdido." data-en="Stratus Connect was specifically designed for local businesses with bookings — barbershops, hair salons, aesthetics, physiotherapy and dental clinics. Businesses where a missed call literally means a lost client.">Stratus Connect foi desenhado especificamente para negócios locais com agendamento — barbearias, salões de cabeleireiro, estética, fisioterapia e clínicas dentárias. Negócios onde uma chamada perdida é literalmente um cliente perdido.</p></div></div></div>
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="Em quanto tempo está tudo a funcionar?" data-en="How long until everything is working?">Em quanto tempo está tudo a funcionar?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="7 dias úteis desde que recebemos a informação inicial (logo, fotos, horários, serviços). O assistente IA fica configurado em 3-4 dias. O site em 5-7. Tudo testado antes de entregar." data-en="7 business days after we receive initial info (logo, photos, hours, services). The AI assistant is configured in 3-4 days. The website in 5-7. Everything tested before delivery.">7 dias úteis desde que recebemos a informação inicial (logo, fotos, horários, serviços). O assistente IA fica configurado em 3-4 dias. O site em 5-7. Tudo testado antes de entregar.</p></div></div></div>
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="O assistente IA fala português natural?" data-en="Does the AI assistant speak natural Portuguese?">O assistente IA fala português natural?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim, português de Portugal — não brasileiro, nem traduções estranhas. É configurado especificamente para o teu negócio: conhece os serviços, os preços, os horários, e fala como uma rececionista profissional falaria." data-en="Yes, European Portuguese — not Brazilian, no weird translations. It's configured specifically for your business: knows the services, prices, hours, and speaks like a professional receptionist would.">Sim, português de Portugal — não brasileiro, nem traduções estranhas. É configurado especificamente para o teu negócio: conhece os serviços, os preços, os horários, e fala como uma rececionista profissional falaria.</p></div></div></div>
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="Preciso de saber tecnologia para usar?" data-en="Do I need tech knowledge to use it?">Preciso de saber tecnologia para usar?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Zero. Tratamos de tudo. Você só usa o WhatsApp normal — vê as conversas que o assistente teve com clientes, e recebe um resumo diário com as marcações novas." data-en="Zero. We handle everything. You just use WhatsApp normally — see the conversations the assistant had with clients, and get a daily summary of new bookings.">Zero. Tratamos de tudo. Você só usa o WhatsApp normal — vê as conversas que o assistente teve com clientes, e recebe um resumo diário com as marcações novas.</p></div></div></div>
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="Posso cancelar a qualquer momento?" data-en="Can I cancel anytime?">Posso cancelar a qualquer momento?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim. Sem fidelização, sem multas. Cancele com 30 dias de aviso por WhatsApp ou email. O site fica seu — exportamos o código se quiseres levar para outro lado." data-en="Yes. No lock-in, no penalties. Cancel with 30 days notice by WhatsApp or email. The website is yours — we export the code if you want to take it elsewhere.">Sim. Sem fidelização, sem multas. Cancele com 30 dias de aviso por WhatsApp ou email. O site fica seu — exportamos o código se quiseres levar para outro lado.</p></div></div></div>
-    <div class="faq-item rv"><div class="faq-q"><span data-pt="E se não funcionar como prometido?" data-en="What if it doesn't work as promised?">E se não funcionar como prometido?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Garantia de 30 dias. Se o assistente não responder bem, se o site tiver problemas técnicos, ou se as integrações falharem — devolvemos o setup completo. Sem perguntas. A garantia cobre falhas técnicas nossas, não mudanças de ideia." data-en="30-day guarantee. If the assistant doesn't respond well, if the website has technical issues, or if integrations fail — we refund the full setup. No questions asked. The guarantee covers our technical failures, not change of mind.">Garantia de 30 dias. Se o assistente não responder bem, se o site tiver problemas técnicos, ou se as integrações falharem — devolvemos o setup completo. Sem perguntas. A garantia cobre falhas técnicas nossas, não mudanças de ideia.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="Para que tipo de negócios funciona melhor?" data-en="What types of businesses does this work best for?">Para que tipo de negócios funciona melhor?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Stratus foi desenhado para negócios locais com agendamento — barbearias, salões de cabeleireiro, estética, fisioterapia e clínicas dentárias. Negócios onde a presença online é o principal canal de descoberta por novos clientes." data-en="Stratus was designed for local businesses with bookings — barbershops, hair salons, aesthetics, physiotherapy and dental clinics. Businesses where online presence is the main discovery channel for new clients.">Stratus foi desenhado para negócios locais com agendamento — barbearias, salões de cabeleireiro, estética, fisioterapia e clínicas dentárias. Negócios onde a presença online é o principal canal de descoberta por novos clientes.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="Em quanto tempo está tudo a funcionar?" data-en="How long until everything is working?">Em quanto tempo está tudo a funcionar?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="7 dias úteis desde que recebemos a informação inicial (logo, fotos, horários, serviços). O site fica em 5-7 dias. O Google Business e as reviews automáticas em 2-3 dias. O Instagram em 3-4 dias. Tudo testado antes de entregar." data-en="7 business days after we receive initial info (logo, photos, hours, services). The website is done in 5-7 days. Google Business and automatic reviews in 2-3 days. Instagram in 3-4 days. Everything tested before delivery.">7 dias úteis desde que recebemos a informação inicial (logo, fotos, horários, serviços). O site fica em 5-7 dias. O Google Business e as reviews automáticas em 2-3 dias. O Instagram em 3-4 dias. Tudo testado antes de entregar.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="Como funcionam as reviews automáticas?" data-en="How do automatic reviews work?">Como funcionam as reviews automáticas?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Após cada serviço, o sistema envia automaticamente uma mensagem WhatsApp ao cliente a pedir uma review no Google. A taxa de conversão é 3-5× maior do que pedir pessoalmente. Sem esforço da sua parte." data-en="After each service, the system automatically sends a WhatsApp message to the client asking for a Google review. The conversion rate is 3-5× higher than asking in person. No effort on your part.">Após cada serviço, o sistema envia automaticamente uma mensagem WhatsApp ao cliente a pedir uma review no Google. A taxa de conversão é 3-5× maior do que pedir pessoalmente. Sem esforço da sua parte.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="O que inclui a otimização do Instagram?" data-en="What does Instagram optimization include?">O que inclui a otimização do Instagram?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Bio otimizada, destaques criados, hashtags estratégicas, e publicações mensais criadas por nós (4/mês no Pro, 8/mês no Premium). O objetivo é que o perfil converta visitantes em clientes — não apenas em seguidores." data-en="Optimized bio, created highlights, strategic hashtags, and monthly posts created by us (4/month on Pro, 8/month on Premium). The goal is for the profile to convert visitors into clients — not just followers.">Bio otimizada, destaques criados, hashtags estratégicas, e publicações mensais criadas por nós (4/mês no Pro, 8/mês no Premium). O objetivo é que o perfil converta visitantes em clientes — não apenas em seguidores.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="Posso cancelar a qualquer momento?" data-en="Can I cancel anytime?">Posso cancelar a qualquer momento?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Sim. Sem fidelização, sem multas. Cancele com 30 dias de aviso por WhatsApp ou email. O site fica seu — exportamos o código se quiser levar para outro lado." data-en="Yes. No lock-in, no penalties. Cancel with 30 days notice by WhatsApp or email. The website is yours — we export the code if you want to take it elsewhere.">Sim. Sem fidelização, sem multas. Cancele com 30 dias de aviso por WhatsApp ou email. O site fica seu — exportamos o código se quiser levar para outro lado.</p></div></div></div>
+    <div class="faq-item rv"><div class="faq-q"><span data-pt="E se não funcionar como prometido?" data-en="What if it doesn't work as promised?">E se não funcionar como prometido?</span><span class="faq-arrow">+</span></div><div class="faq-a"><div class="faq-a-inner"><p data-pt="Garantia de 30 dias. Se o site tiver problemas técnicos, se o sistema de reviews não funcionar, ou se as integrações falharem — devolvemos o setup completo. Sem perguntas. A garantia cobre falhas técnicas nossas, não mudanças de ideia." data-en="30-day guarantee. If the website has technical issues, if the reviews system doesn't work, or if integrations fail — we refund the full setup. No questions asked. The guarantee covers our technical failures, not change of mind.">Garantia de 30 dias. Se o site tiver problemas técnicos, se o sistema de reviews não funcionar, ou se as integrações falharem — devolvemos o setup completo. Sem perguntas. A garantia cobre falhas técnicas nossas, não mudanças de ideia.</p></div></div></div>
   </div>
 </section>
  
@@ -1097,7 +1002,7 @@ footer{
     <div class="cta-content">
       <div class="section-tag" style="display:inline-flex;margin-bottom:14px"><span data-pt="5 vagas restantes" data-en="5 slots left">5 vagas restantes</span></div>
       <h2 data-pt='Pronto para parar de <i>perder clientes?</i>' data-en='Ready to stop <i>losing clients?</i>'>Pronto para parar de <i>perder clientes?</i></h2>
-      <p data-pt="Reunião gratuita de 15 minutos. Sem compromisso. Sem letras pequenas. Vemos se o Stratus Connect faz sentido para o seu negócio." data-en="Free 15-minute meeting. No commitment. No fine print. We see if Stratus Connect makes sense for your business.">Reunião gratuita de 15 minutos. Sem compromisso. Sem letras pequenas. Vemos se o Stratus Connect faz sentido para o seu negócio.</p>
+      <p data-pt="Reunião gratuita de 15 minutos. Sem compromisso. Sem letras pequenas. Vemos se o Stratus faz sentido para o seu negócio." data-en="Free 15-minute meeting. No commitment. No fine print. We see if Stratus makes sense for your business.">Reunião gratuita de 15 minutos. Sem compromisso. Sem letras pequenas. Vemos se o Stratus faz sentido para o seu negócio.</p>
       <div class="cta-actions">
         <a class="btn-p" href="https://wa.me/351XXXXXXXXX" data-pt="Falar no WhatsApp →" data-en="Chat on WhatsApp →">Falar no WhatsApp →</a>
         <a class="btn-g" href="mailto:hello@stratus.pt" data-pt="Enviar Email" data-en="Send Email">Enviar Email</a>
@@ -1114,17 +1019,17 @@ footer{
   <div class="ft-top">
     <div class="ft-brand">
       <div class="ft-brand-line">
-        <div class="nav-mark" style="width:30px;height:30px;font-size:20px">S</div>
-        <div class="ft-brand-name">Stratus <i>Connect</i></div>
+        <div class="nav-mark" style="width:30px;height:30px;font-size:14px">S</div>
+        <div class="ft-brand-name">Stratus</div>
       </div>
       <p data-pt="Presença digital completa para negócios locais em Portugal." data-en="Complete digital presence for local businesses in Portugal.">Presença digital completa para negócios locais em Portugal.</p>
       <p style="font-size:13px"><a href="mailto:hello@stratus.pt" style="color:var(--ink-soft);transition:color .2s">hello@stratus.pt</a></p>
     </div>
     <div class="ft-col">
       <h4 data-pt="Planos" data-en="Plans">Planos</h4>
-      <a href="#precos">Connect Base</a>
-      <a href="#precos">Connect Pro</a>
-      <a href="#precos">Connect Premium</a>
+      <a href="#precos">Base</a>
+      <a href="#precos">Pro</a>
+      <a href="#precos">Premium</a>
     </div>
     <div class="ft-col">
       <h4 data-pt="Navegação" data-en="Navigation">Navegação</h4>
@@ -1135,7 +1040,7 @@ footer{
     </div>
   </div>
   <div class="ft-bot">
-    <p>© 2026 Stratus Connect.</p>
+    <p>© 2026 Stratus.</p>
     <div class="ft-bot-right">
       <a href="https://instagram.com/stratusagencyco" target="_blank" rel="noopener" class="ft-social">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1146,7 +1051,6 @@ footer{
 </footer>
  
 <script>
-// Reveal on scroll
 const ob = new IntersectionObserver(es => {
   es.forEach((e, i) => {
     if (e.isIntersecting) {
@@ -1157,13 +1061,11 @@ const ob = new IntersectionObserver(es => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.rv').forEach(el => ob.observe(el));
  
-// Duplicate carousels for seamless loop
 const ct1 = document.getElementById('ct1');
 const ct2 = document.getElementById('ct2');
 ct1.innerHTML += ct1.innerHTML;
 ct2.innerHTML += ct2.innerHTML;
  
-// Mockup tilt on scroll
 const mockup = document.getElementById('mockup');
 const mockupWrap = document.getElementById('mockupWrap');
 function updateMockup() {
@@ -1179,7 +1081,6 @@ function updateMockup() {
 window.addEventListener('scroll', updateMockup, { passive: true });
 updateMockup();
  
-// FAQ
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', function() {
     const it = this.parentElement;
@@ -1189,7 +1090,6 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 });
  
-// Language switcher
 const bP = document.getElementById('btn-pt');
 const bE = document.getElementById('btn-en');
 bP.addEventListener('click', () => setLang('pt'));
@@ -1208,4 +1108,3 @@ function setLang(l) {
 </script>
 </body>
 </html>
- 
