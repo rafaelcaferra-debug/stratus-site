@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stratus — Packaging research for YouTube channels</title>
+<meta name="description" content="Five validated video concepts a week for YouTube channels between 5,000 and 50,000 subscribers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stratus — Packaging research for YouTube channels">
+<meta property="og:description" content="Five validated video concepts a week for YouTube channels between 5,000 and 50,000 subscribers.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233E7BFF'/%3E%3Ctext x='32' y='33' text-anchor='middle' dominant-baseline='central' font-family='Archivo,sans-serif' font-weight='800' font-size='40' fill='%23ffffff'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #FAF9F6; }
+  ::selection { background: rgba(120,150,255,.28); }
+  a { color: #17181A; text-decoration: none; }
+  a:hover { color: var(--accent, #3E7BFF); }
+  @keyframes floatA { 0% { transform: translateY(-7px); } 100% { transform: translateY(9px); } }
+  @keyframes floatB { 0% { transform: translateY(6px) translateX(-4px); } 100% { transform: translateY(-8px) translateX(5px); } }
+  @media (max-width: 900px) {
+    [data-hero] { grid-template-columns: 1fr !important; min-height: 0 !important; padding-top: 88px !important; padding-bottom: 72px !important; }
+    [data-stage] { perspective: none !important; height: auto !important; display: grid !important; gap: 14px !important; margin-top: 40px !important; }
+    [data-panel-wrap] { position: static !important; transform: none !important; }
+    [data-panel-wrap][data-mobile-hide="true"] { display: none !important; }
+    [data-panel-float] { animation: none !important; }
+    [data-panel] { transform: none !important; }
+    [data-cols] { grid-template-columns: 1fr !important; gap: 40px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</helmet>
+<div ref="{{ rootRef }}" style="--accent: {{ accent }}; background: #FAF9F6; color: #17181A; font-family: 'Archivo', sans-serif; min-height: 100vh; overflow-x: hidden;">
+
+  <div data-progress style="position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; z-index: 50;"></div>
+
+  <div data-screen-label="Top bar" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 26px 6vw; box-sizing: border-box;">
+    <div style="display: flex; align-items: baseline; gap: 12px;">
+      <span style="font-weight: 850; font-stretch: 122%; font-size: 17px; letter-spacing: .06em; text-transform: uppercase;">Stratus</span>
+      <span style="font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: #93979E;">Packaging research</span>
+    </div>
+    <a href="mailto:rafaelcaferra@gmail.com" style="font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #3E434B; border-bottom: 1px solid rgba(20,22,30,.25); padding-bottom: 3px;">Contact</a>
+  </div>
+
+  <header data-hero data-screen-label="Hero" style="position: relative; min-height: 100vh; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); align-items: center; gap: 48px; padding: 64px 6vw; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(1000px 760px at 72% 38%, color-mix(in srgb, var(--accent) 10%, #F3F2ED) 0%, rgba(250,249,246,0) 62%); pointer-events: none;"></div>
+    <div style="position: absolute; inset: 0; opacity: .04; pointer-events: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/><feColorMatrix type=%22saturate%22 values=%220%22/></filter><rect width=%22160%22 height=%22160%22 filter=%22url(%23n)%22/></svg>');"></div>
+    <div style="position: relative; z-index: 1;">
+      <h1 data-reveal style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(40px, 5vw, 78px); line-height: 1.02; letter-spacing: -0.022em;">Packaging research<br>for YouTube<br>channels</h1>
+      <p data-reveal style="margin: 32px 0 0; font-size: 18px; line-height: 1.6; color: #3E434B; max-width: 60ch;">Channels between 5,000 and 50,000 subscribers.</p>
+      <p data-reveal style="margin: 14px 0 0; font-size: 15px; line-height: 1.7; color: #7A7F87; max-width: 48ch;"><strong style="font-weight: 680; color: #3E434B;">Five validated video concepts a week</strong> — title, thumbnail direction, and the channel data behind each one.</p>
+    </div>
+    <div data-stage style="position: relative; z-index: 1; height: min(68vh, 620px); perspective: 1100px; transform-style: preserve-3d;">
+      <sc-for list="{{ panels }}" as="pn" hint-placeholder-count="6">
+        <div data-panel-wrap data-depth="{{ pn.depth }}" data-mobile-hide="{{ pn.hide }}" style="position: absolute; left: {{ pn.left }}; top: {{ pn.top }}; transform-style: preserve-3d; will-change: transform;">
+          <div data-panel-float data-fade style="animation: {{ pn.anim }}; transform-style: preserve-3d;">
+            <div data-panel style="transform: {{ pn.tf }}; background: linear-gradient(135deg, rgba(255,255,255,.78), rgba(255,255,255,.5)); border: 1px solid rgba(20,22,30,.09); backdrop-filter: blur(8px); border-radius: 4px; box-shadow: 0 18px 44px rgba(25,30,45,.10); padding: 16px 22px;">
+              <div style="font-weight: 750; font-variant-numeric: tabular-nums; font-size: {{ pn.fs }}; letter-spacing: -0.02em; white-space: nowrap; line-height: 1;"><span style="color: var(--accent);">{{ pn.a }}</span> <span style="color: #C9CCD1; font-weight: 300;">→</span> <span style="color: #7A7F87;">{{ pn.b }}</span></div>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </header>
+
+  <section data-screen-label="How it works" style="position: relative; overflow: hidden; padding: 72px 6vw 110px; box-sizing: border-box;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(720px 520px at 12% 78%, color-mix(in srgb, var(--accent) 8%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 64%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto;">
+      <div data-reveal style="font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: #7A7F87; margin-bottom: 64px;">How it works</div>
+      <div data-cols style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px;">
+        <div data-reveal>
+          <div style="font-weight: 850; font-stretch: 122%; font-size: clamp(44px, 4vw, 64px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">01</div>
+          <p style="margin: 24px 0 0; font-size: 15.5px; line-height: 1.7; color: #565B63; max-width: 60ch;">I pull <strong style="font-weight: 680; color: #17181A;">every long-form upload</strong> from the channel and find the spread — <strong style="font-weight: 680; color: #17181A;">which videos beat the median</strong> and by how much.</p>
+        </div>
+        <div data-reveal>
+          <div style="font-weight: 850; font-stretch: 122%; font-size: clamp(44px, 4vw, 64px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">02</div>
+          <p style="margin: 24px 0 0; font-size: 15.5px; line-height: 1.7; color: #565B63; max-width: 60ch;">I work out <strong style="font-weight: 680; color: #17181A;">what the winners share</strong> and what the flat ones share. <strong style="font-weight: 680; color: #17181A;">It's almost never the topic.</strong></p>
+        </div>
+        <div data-reveal>
+          <div style="font-weight: 850; font-stretch: 122%; font-size: clamp(44px, 4vw, 64px); line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">03</div>
+          <p style="margin: 24px 0 0; font-size: 15.5px; line-height: 1.7; color: #565B63; max-width: 60ch;"><strong style="font-weight: 680; color: #17181A;">Five concepts a week</strong>, each one built on a pattern the channel has <strong style="font-weight: 680; color: #17181A;">already proven</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Analyses" style="position: relative; overflow: hidden; padding: 60px 0 40px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(840px 600px at 88% 30%, color-mix(in srgb, var(--accent) 7%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 62%), radial-gradient(680px 520px at 8% 72%, color-mix(in srgb, var(--accent) 6%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 64%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 1; padding: 0 6vw; box-sizing: border-box;">
+      <div style="max-width: 1240px; margin: 0 auto;">
+        <h2 data-reveal style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.1; letter-spacing: -0.015em; max-width: 20ch;">Three channels, three patterns.</h2>
+        <p data-reveal style="margin: 16px 0 0; font-size: 16px; color: #7A7F87;">Real numbers, names withheld.</p>
+      </div>
+    </div>
+    <article data-tilt data-screen-label="AI automation · 15,500 subscribers" style="padding: 110px 6vw 40px; box-sizing: border-box; will-change: transform;">
+      <div style="max-width: 1240px; margin: 0 auto;">
+        <div data-reveal style="display: flex; align-items: baseline; gap: clamp(14px, 2.5vw, 32px); flex-wrap: wrap; line-height: .95;">
+          <span data-count="63523" style="font-weight: 850; font-stretch: 122%; font-size: clamp(58px, 10vw, 156px); letter-spacing: -0.035em; color: var(--accent); font-variant-numeric: tabular-nums;">63,523</span>
+          <span data-pair-rest style="display: inline-flex; align-items: baseline; gap: clamp(14px, 2.5vw, 32px);">
+            <span style="font-size: clamp(26px, 4vw, 64px); font-weight: 200; color: #C9CCD1;">→</span>
+            <span style="font-weight: 850; font-stretch: 122%; font-size: clamp(58px, 10vw, 156px); letter-spacing: -0.035em; color: #B7BAC1; font-variant-numeric: tabular-nums;">76</span>
+          </span>
+        </div>
+        <div data-reveal style="margin-top: 26px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7A7F87;">AI automation · 15,500 subscribers</div>
+        <svg data-chart data-reveal viewBox="0 0 800 216" width="100%" style="margin-top: 44px; display: block; max-width: 800px; overflow: visible;">
+          <text x="165" y="20" text-anchor="end" font-size="13" fill="#7A7F87">Tool tutorial</text>
+          <rect data-barw="445" x="175" y="8" width="445" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="632" y="20" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">63,523</text>
+          <text x="165" y="56" text-anchor="end" font-size="13" fill="#7A7F87">Tool tutorial</text>
+          <rect data-barw="404" x="175" y="44" width="404" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="591" y="56" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">57,682</text>
+          <text x="165" y="92" text-anchor="end" font-size="13" fill="#7A7F87">Tool tutorial</text>
+          <rect data-barw="320" x="175" y="80" width="320" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="507" y="92" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">45,687</text>
+          <text x="165" y="128" text-anchor="end" font-size="13" fill="#7A7F87">Tool tutorial</text>
+          <rect data-barw="169" x="175" y="116" width="169" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="356" y="128" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">24,165</text>
+          <text x="165" y="164" text-anchor="end" font-size="13" fill="#7A7F87">Guest interview</text>
+          <rect data-barw="2" x="175" y="152" width="2" height="14" fill="#D7D9DD"></rect>
+          <text data-barval x="189" y="164" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">114</text>
+          <text x="165" y="200" text-anchor="end" font-size="13" fill="#7A7F87">Guest interview</text>
+          <rect data-barw="2" x="175" y="188" width="2" height="14" fill="#D7D9DD"></rect>
+          <text data-barval x="189" y="200" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">76</text>
+        </svg>
+        <div style="margin-top: 40px; max-width: 60ch; display: grid; gap: 18px;">
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">The four biggest videos on this channel all name a specific software tool in the title. They did 63,523, 57,682, 45,687 and 24,165 views.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">The two most recent uploads are interviews, titled around who the guest is. They did 114 and 76.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #212429;">The interviews aren't the problem. This audience <strong style="font-weight: 680; color: #17181A;">arrived for a named tool</strong> and something they could go and build afterwards. A guest's name carries no search demand and makes no promise, so the video has to be sold entirely on the thumbnail. <strong style="font-weight: 680; color: #17181A;">Same guest, framed as a specific build, is a different video.</strong></p>
+        </div>
+      </div>
+    </article>
+    <article data-tilt data-screen-label="Lawn care · 16,700 subscribers" style="padding: 110px 6vw 40px; box-sizing: border-box; will-change: transform;">
+      <div data-cols style="max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: start;">
+        <div>
+          <div data-reveal style="display: flex; align-items: baseline; gap: clamp(12px, 1.8vw, 24px); flex-wrap: wrap; line-height: .95;">
+            <span data-count="11746" style="font-weight: 850; font-stretch: 122%; font-size: clamp(52px, 7vw, 120px); letter-spacing: -0.035em; color: var(--accent); font-variant-numeric: tabular-nums;">11,746</span>
+            <span data-pair-rest style="display: inline-flex; align-items: baseline; gap: clamp(12px, 1.8vw, 24px);">
+              <span style="font-size: clamp(24px, 3vw, 52px); font-weight: 200; color: #C9CCD1;">→</span>
+              <span style="font-weight: 850; font-stretch: 122%; font-size: clamp(52px, 7vw, 120px); letter-spacing: -0.035em; color: #B7BAC1; font-variant-numeric: tabular-nums;">158</span>
+            </span>
+          </div>
+          <div data-reveal style="margin-top: 26px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7A7F87;">Lawn care · 16,700 subscribers</div>
+          <svg data-chart data-reveal viewBox="0 0 640 180" width="100%" style="margin-top: 44px; display: block; width: 118%; max-width: 760px; overflow: visible;">
+            <text x="150" y="20" text-anchor="end" font-size="13" fill="#7A7F87">Person + number</text>
+            <rect data-barw="340" x="160" y="8" width="340" height="14" fill="var(--accent)"></rect>
+            <text data-barval x="512" y="20" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">11,746</text>
+            <text x="150" y="56" text-anchor="end" font-size="13" fill="#7A7F87">Person + number</text>
+            <rect data-barw="145" x="160" y="44" width="145" height="14" fill="var(--accent)"></rect>
+            <text data-barval x="317" y="56" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">5,012</text>
+            <text x="150" y="92" text-anchor="end" font-size="13" fill="#7A7F87">Channel median</text>
+            <rect data-barw="6" x="160" y="80" width="6" height="14" fill="#D7D9DD"></rect>
+            <text data-barval x="178" y="92" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">194</text>
+            <text x="150" y="128" text-anchor="end" font-size="13" fill="#7A7F87">Motivational</text>
+            <rect data-barw="5" x="160" y="116" width="5" height="14" fill="#D7D9DD"></rect>
+            <text data-barval x="177" y="128" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">187</text>
+            <text x="150" y="164" text-anchor="end" font-size="13" fill="#7A7F87">Motivational</text>
+            <rect data-barw="5" x="160" y="152" width="5" height="14" fill="#D7D9DD"></rect>
+            <text data-barval x="177" y="164" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">158</text>
+          </svg>
+        </div>
+        <div style="max-width: 60ch; display: grid; gap: 18px;">
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">Median across the last 43 long-form uploads: 194 views. One video did 11,746 — a profile of a teenager running a lawn care route. Another did 5,012, following a guy who went from working out of a car trunk to 62 lawns a week.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">In the same month, two motivational uploads about not waiting and not being late did 187 and 158.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #212429;">The winners put <strong style="font-weight: 680; color: #17181A;">a real person and a real number in front</strong>. The motivational ones ask a stranger to care about the message before they know what's inside. <strong style="font-weight: 680; color: #17181A;">Sixty times apart, same channel, same weeks.</strong></p>
+        </div>
+      </div>
+    </article>
+    <article data-tilt data-screen-label="Assisted living · 24,100 subscribers" style="padding: 110px 6vw 40px; box-sizing: border-box; will-change: transform;">
+      <div style="max-width: 1240px; margin: 0 auto;">
+        <p data-reveal style="margin: 0 0 28px; font-size: 17px; line-height: 1.6; color: #3E434B;">Not every stalled channel is a big one.</p>
+        <div data-reveal style="display: flex; align-items: baseline; gap: clamp(12px, 1.8vw, 24px); flex-wrap: wrap; line-height: .95;">
+          <span data-count="295" style="font-weight: 850; font-stretch: 122%; font-size: clamp(48px, 6.5vw, 104px); letter-spacing: -0.035em; color: var(--accent); font-variant-numeric: tabular-nums;">295</span>
+          <span data-pair-rest style="display: inline-flex; align-items: baseline; gap: clamp(12px, 1.8vw, 24px);">
+            <span style="font-size: clamp(22px, 2.8vw, 46px); font-weight: 200; color: #C9CCD1;">→</span>
+            <span style="font-weight: 850; font-stretch: 122%; font-size: clamp(48px, 6.5vw, 104px); letter-spacing: -0.035em; color: #B7BAC1; font-variant-numeric: tabular-nums;">59</span>
+          </span>
+        </div>
+        <div data-reveal style="margin-top: 26px; font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7A7F87;">Assisted living · 24,100 subscribers</div>
+        <svg data-chart data-reveal viewBox="0 0 800 216" width="100%" style="margin-top: 44px; display: block; max-width: 800px; overflow: visible;">
+          <text x="165" y="20" text-anchor="end" font-size="13" fill="#7A7F87">Named state</text>
+          <rect data-barw="404" x="175" y="8" width="404" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="591" y="20" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">268</text>
+          <text x="165" y="56" text-anchor="end" font-size="13" fill="#7A7F87">Named state</text>
+          <rect data-barw="255" x="175" y="44" width="255" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="442" y="56" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">169</text>
+          <text x="165" y="92" text-anchor="end" font-size="13" fill="#7A7F87">What owners earn</text>
+          <rect data-barw="445" x="175" y="80" width="445" height="14" fill="var(--accent)"></rect>
+          <text data-barval x="632" y="92" font-size="13" fill="var(--accent)" style="font-variant-numeric: tabular-nums;">295</text>
+          <text x="165" y="128" text-anchor="end" font-size="13" fill="#7A7F87">Channel median</text>
+          <rect data-barw="104" x="175" y="116" width="104" height="14" fill="#D7D9DD"></rect>
+          <text data-barval x="291" y="128" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">69</text>
+          <text x="165" y="164" text-anchor="end" font-size="13" fill="#7A7F87">Generic business</text>
+          <rect data-barw="89" x="175" y="152" width="89" height="14" fill="#D7D9DD"></rect>
+          <text data-barval x="276" y="164" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">59</text>
+          <text x="165" y="200" text-anchor="end" font-size="13" fill="#7A7F87">Generic passive income</text>
+          <rect data-barw="152" x="175" y="188" width="152" height="14" fill="#D7D9DD"></rect>
+          <text data-barval x="339" y="200" font-size="13" fill="#93979E" style="font-variant-numeric: tabular-nums;">101</text>
+        </svg>
+        <div style="margin-top: 40px; max-width: 60ch; display: grid; gap: 18px;">
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">Median across the last 16 uploads: 69 views. The videos naming a specific US state and its licensing process did 268 and 169. One asking what owners actually earn did 295.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63;">The general ones — what makes a good business idea, best passive income this year — did 59 and 101.</p>
+          <p data-reveal style="margin: 0; font-size: 16px; line-height: 1.75; color: #212429;">This audience shows up for <strong style="font-weight: 680; color: #17181A;">licensing, a named state, or a number</strong>. General wealth topics put a 24,000 subscriber channel against every finance channel on the platform, <strong style="font-weight: 680; color: #17181A;">with no edge to fight on</strong>.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section data-screen-label="What you get" style="position: relative; overflow: hidden; background: #F1EFE9; padding: 130px 6vw; box-sizing: border-box; margin-top: 80px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(760px 560px at 78% 18%, color-mix(in srgb, var(--accent) 10%, rgba(241,239,233,0)) 0%, rgba(241,239,233,0) 62%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto;">
+      <h2 data-reveal style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.1; letter-spacing: -0.015em;">What you get, every week</h2>
+      <div style="margin-top: 64px; display: grid; gap: 48px;">
+        <div data-reveal style="display: grid; grid-template-columns: 84px 1fr; gap: 24px; align-items: baseline;">
+          <span style="font-weight: 850; font-stretch: 122%; font-size: 34px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">01</span>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E434B; max-width: 60ch;"><strong style="font-weight: 680; color: #17181A;">Five concepts.</strong> Each one is <strong style="font-weight: 680; color: #17181A;">a title, a thumbnail direction, and the reason it should work</strong> — which video on your own channel proves the pattern, and the numbers behind it.</p>
+        </div>
+        <div data-reveal style="display: grid; grid-template-columns: 84px 1fr; gap: 24px; align-items: baseline;">
+          <span style="font-weight: 850; font-stretch: 122%; font-size: 34px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">02</span>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E434B; max-width: 60ch;">Delivered as <strong style="font-weight: 680; color: #17181A;">one document</strong>. No calls, no meetings, nothing to sit through.</p>
+        </div>
+        <div data-reveal style="display: grid; grid-template-columns: 84px 1fr; gap: 24px; align-items: baseline;">
+          <span style="font-weight: 850; font-stretch: 122%; font-size: 34px; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums;">03</span>
+          <p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E434B; max-width: 60ch;"><strong style="font-weight: 680; color: var(--accent); font-variant-numeric: tabular-nums;">€250 a month</strong>, month to month. Cancel whenever you want.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Who this is for" style="position: relative; overflow: hidden; padding: 130px 6vw 20px; box-sizing: border-box;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(700px 520px at 18% 30%, color-mix(in srgb, var(--accent) 8%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 64%); pointer-events: none;"></div>
+    <div data-cols style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px;">
+      <div data-reveal>
+        <h3 style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.15; letter-spacing: -0.01em;">Who this is for</h3>
+        <p style="margin: 24px 0 0; font-size: 16px; line-height: 1.75; color: #565B63; max-width: 60ch;">Channels between <strong style="font-weight: 680; color: #17181A;">5,000 and 50,000 subscribers</strong> where <strong style="font-weight: 680; color: #17181A;">the views stopped tracking the subscriber count</strong>. You publish consistently, the content is good, and the numbers stopped moving anyway.</p>
+      </div>
+      <div data-reveal>
+        <h3 style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.15; letter-spacing: -0.01em; color: #7A7F87;">Who this isn't for</h3>
+        <p style="margin: 24px 0 0; font-size: 16px; line-height: 1.75; color: #93979E; max-width: 60ch;">Channels <strong style="font-weight: 680; color: #565B63;">under 5,000 subscribers</strong> — there isn't enough history to find a pattern in yet. Channels that publish <strong style="font-weight: 680; color: #565B63;">mostly Shorts</strong>. And anyone looking for someone to make the thumbnails: <strong style="font-weight: 680; color: #565B63;">I do the research and the direction, not the design</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="What a concept looks like" style="position: relative; overflow: hidden; padding: 130px 6vw 20px; box-sizing: border-box;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(900px 620px at 80% 12%, color-mix(in srgb, var(--accent) 9%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 62%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto;">
+      <h2 data-reveal style="margin: 0; font-weight: 850; font-stretch: 122%; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.1; letter-spacing: -0.015em; color: var(--accent);">What a concept looks like</h2>
+      <div data-cols style="margin-top: 64px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px;">
+        <div data-reveal>
+          <div style="font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7A7F87;">Current</div>
+          <div style="margin-top: 18px; aspect-ratio: 16 / 9; border: 1px solid rgba(20,22,30,.15); transition: box-shadow .45s ease, border-color .45s ease, transform .45s ease; background: #FFFFFF;" style-hover="box-shadow: 0 28px 80px color-mix(in srgb, var(--accent) 26%, transparent); border-color: color-mix(in srgb, var(--accent) 40%, #FAF9F6); transform: translateY(-4px);">
+            <img src="uploads/current.jpg" alt="Current thumbnail" style="width: 100%; height: 100%; display: block; object-fit: cover;">
+          </div>
+          <div style="margin-top: 16px; font-size: 15.5px; line-height: 1.5; color: #17181A; font-weight: 700;">4 Critical Business Decisions That Build Your Dream Landscaping Company!</div>
+          <div style="margin-top: 6px; font-size: 13px; color: #93979E; font-variant-numeric: tabular-nums;">2,100 views · channel median 6,600</div>
+        </div>
+        <div data-reveal>
+          <div style="font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #7A7F87;">Proposed</div>
+          <div style="margin-top: 18px; aspect-ratio: 16 / 9; border: 1px solid rgba(20,22,30,.15); transition: box-shadow .45s ease, border-color .45s ease, transform .45s ease; background: #FFFFFF;" style-hover="box-shadow: 0 28px 80px color-mix(in srgb, var(--accent) 26%, transparent); border-color: color-mix(in srgb, var(--accent) 40%, #FAF9F6); transform: translateY(-4px);">
+            <img src="uploads/proposed.jpg" alt="Proposed thumbnail" style="width: 100%; height: 100%; display: block; object-fit: cover;">
+          </div>
+          <div style="margin-top: 16px; font-size: 15.5px; line-height: 1.5; color: #17181A; font-weight: 700;">$5 Million Without Leaving a 5-Mile Radius</div>
+        </div>
+      </div>
+      <div data-reveal style="margin-top: 56px; border-top: 1px solid rgba(20,22,30,.12); padding-top: 28px;">
+        <div style="font-size: 12.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent);">Reasoning</div>
+        <div style="margin-top: 28px; display: grid; gap: 26px; padding-left: 22px; border-left: 2px solid color-mix(in srgb, var(--accent) 30%, #FAF9F6);">
+          <p style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63; max-width: 60ch;">A 251,000 subscriber lawn care channel. Median across the last fifteen uploads: <strong style="font-weight: 680; color: var(--accent);">6,600</strong> views. This one did <strong style="font-weight: 680; color: var(--accent);">2,100</strong>.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63; max-width: 60ch;">The thumbnail is good. It promises four strategies he wishes he'd done sooner — regret, specificity, a reason to click. The title promises four critical decisions that build your dream company, which is an abstraction, and nobody is standing in an abstraction. The packaging is making two different arguments and the weaker one is the part search sees.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.75; color: #565B63; max-width: 60ch;">Twenty minutes in, he says he wants to build a <strong style="font-weight: 680; color: var(--accent);">$5 million</strong> company inside a five-mile radius, and that he turns down work outside it. That's the video. Neither the title nor the thumbnail knows it's there.</p>
+          <p style="margin: 0; font-size: 16px; line-height: 1.75; color: #212429; max-width: 60ch; font-weight: 680;">The proposed title makes the same claim the video already makes. Nothing was added.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-screen-label="Contact" style="position: relative; overflow: hidden; padding: 170px 6vw 150px; box-sizing: border-box;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(1000px 700px at 22% 85%, color-mix(in srgb, var(--accent) 10%, rgba(250,249,246,0)) 0%, rgba(250,249,246,0) 62%); pointer-events: none;"></div>
+    <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto;">
+      <a data-reveal href="mailto:rafaelcaferra@gmail.com" style="display: inline-block; font-weight: 850; font-stretch: 122%; font-size: clamp(34px, 5vw, 88px); line-height: 1.05; letter-spacing: -0.025em; overflow-wrap: anywhere; transform-origin: left center; transition: transform .4s cubic-bezier(.2,.7,.2,1), color .3s ease;" style-hover="transform: scale(1.045); color: var(--accent);">rafaelcaferra@gmail.com</a>
+      <p data-reveal style="margin: 28px 0 0; font-size: 15px; color: #7A7F87;">Currently taking on new channels.</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#3E7BFF&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#3E7BFF&quot;, &quot;#E8500A&quot;, &quot;#41E38B&quot;], &quot;section&quot;: &quot;Style&quot;}, &quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  renderVals() {
+    return {
+      rootRef: this.rootRef,
+      accent: this.props.accentColor ?? '#3E7BFF',
+      panels: [
+        { a: '63,523', b: '76',  left: '6%',  top: '30%', tf: 'rotateY(-14deg) rotateX(4deg) translateZ(130px)',  fs: '30px', depth: 26, anim: 'floatA 8s ease-in-out -1.2s infinite alternate',  hide: 'false' },
+        { a: '929,335', b: '669', left: '34%', top: '4%',  tf: 'rotateY(-10deg) rotateX(-3deg) translateZ(40px)',  fs: '24px', depth: 15, anim: 'floatB 10s ease-in-out -3s infinite alternate',   hide: 'false' },
+        { a: '11,746', b: '158', left: '48%', top: '50%', tf: 'rotateY(-18deg) rotateX(5deg) translateZ(80px)',   fs: '26px', depth: 20, anim: 'floatA 9s ease-in-out -5s infinite alternate',    hide: 'false' },
+        { a: '806',    b: '121', left: '2%',  top: '70%', tf: 'rotateY(-8deg) rotateX(2deg) translateZ(-50px)',   fs: '20px', depth: 9,  anim: 'floatB 11s ease-in-out -2s infinite alternate',   hide: 'true' },
+        { a: '295',    b: '59',  left: '64%', top: '26%', tf: 'rotateY(-16deg) rotateX(-2deg) translateZ(-100px)', fs: '18px', depth: 6,  anim: 'floatA 12s ease-in-out -7s infinite alternate',   hide: 'true' },
+        { a: '5,012',  b: '187', left: '26%', top: '84%', tf: 'rotateY(-12deg) rotateX(3deg) translateZ(-140px)',  fs: '17px', depth: 4,  anim: 'floatB 13s ease-in-out -4s infinite alternate',   hide: 'true' }
+      ]
+    };
+  }
+  componentDidMount() {
+    const root = this.rootRef.current; if (!root) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const motion = (this.props.motion ?? true) && !reduced;
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
+    const bar = root.querySelector('[data-progress]');
+    const onScroll = () => {
+      const h = document.documentElement;
+      bar.style.transform = 'scaleX(' + (h.scrollTop / Math.max(1, h.scrollHeight - h.clientHeight)) + ')';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    if (!motion) return; // reduced motion: everything static, numbers at final value
+
+    // scroll reveal with sibling stagger
+    const reveals = Array.from(root.querySelectorAll('[data-reveal]'));
+    const byParent = new Map();
+    reveals.forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(20px)';
+      const arr = byParent.get(el.parentElement) || []; arr.push(el); byParent.set(el.parentElement, arr);
+    });
+    byParent.forEach(arr => arr.forEach((el, i) => { el.dataset.rd = i * 100; }));
+    const io = new IntersectionObserver(entries => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target; io.unobserve(el);
+      el.style.transition = 'opacity .7s ease ' + el.dataset.rd + 'ms, transform .7s cubic-bezier(.2,.7,.2,1) ' + el.dataset.rd + 'ms';
+      el.style.opacity = '1'; el.style.transform = 'translateY(0)';
+    }), { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+
+    // hero panels: staggered fade-in (opacity only — transform belongs to float/parallax)
+    root.querySelectorAll('[data-fade]').forEach((el, i) => {
+      el.style.opacity = '0'; el.style.transition = 'opacity .9s ease ' + (200 + i * 130) + 'ms';
+      requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = '1'; }));
+    });
+
+    // count-up: big number 0 -> final over ~1s ease-out; arrow + final number appear together at the end
+    const rests = root.querySelectorAll('[data-pair-rest]');
+    rests.forEach(el => { el.style.opacity = '0'; el.style.transition = 'opacity .5s ease'; });
+    const counts = root.querySelectorAll('[data-count]');
+    counts.forEach(el => { el.textContent = '0'; });
+    const io2 = new IntersectionObserver(entries => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target; io2.unobserve(el);
+      const target = parseInt(el.dataset.count, 10); const D = 1000; const t0 = performance.now();
+      const rest = el.parentElement.querySelector('[data-pair-rest]');
+      const tick = now => {
+        const t = Math.min(1, (now - t0) / D);
+        const e = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(e * target).toLocaleString('en-US');
+        if (t < 1) requestAnimationFrame(tick);
+        else if (rest) rest.style.opacity = '1';
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: 0.4 });
+    counts.forEach(el => io2.observe(el));
+
+    // bar charts: bars grow left -> right over the same ~1s as the count-up
+    const charts = root.querySelectorAll('[data-chart]');
+    charts.forEach(svg => {
+      svg.querySelectorAll('[data-barw]').forEach(r => { r.style.width = '0px'; });
+      svg.querySelectorAll('[data-barval]').forEach(t => { t.style.opacity = '0'; });
+    });
+    const io3 = new IntersectionObserver(entries => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const svg = en.target; io3.unobserve(svg);
+      svg.querySelectorAll('[data-barw]').forEach(r => {
+        r.style.transition = 'width 1s cubic-bezier(.33,1,.68,1)';
+        r.style.width = r.dataset.barw + 'px';
+      });
+      svg.querySelectorAll('[data-barval]').forEach(t => {
+        t.style.transition = 'opacity .6s ease .5s';
+        t.style.opacity = '1';
+      });
+    }), { threshold: 0.3 });
+    charts.forEach(c => io3.observe(c));
+
+    if (false) charts.forEach(svg => {
+      const bars = Array.from(svg.querySelectorAll('[data-barw]'));
+      bars.forEach(bar => {
+        const val = bar.nextElementSibling;
+        const lab = bar.previousElementSibling;
+        const cy = parseFloat(bar.getAttribute('y')) + 7;
+        [bar, val, lab].forEach(el => {
+          el.style.willChange = 'transform';
+          el.style.transformBox = 'view-box';
+          el.style.transformOrigin = (el === lab ? '165px ' : '0px ') + cy + 'px';
+          el.style.transition = (el === bar ? 'width 1s cubic-bezier(.33,1,.68,1), ' : '') + 'transform .45s cubic-bezier(.2,.7,.2,1), opacity .45s cubic-bezier(.2,.7,.2,1), fill .45s cubic-bezier(.2,.7,.2,1)';
+        });
+        const hit = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        hit.setAttribute('x', '0'); hit.setAttribute('y', String(parseFloat(bar.getAttribute('y')) - 6));
+        hit.setAttribute('width', '800'); hit.setAttribute('height', '26');
+        hit.setAttribute('fill', 'transparent'); hit.style.cursor = 'default';
+        svg.appendChild(hit);
+        const on = () => {
+          lab.style.fill = '#17181A';
+          bars.forEach(o => { if (o !== bar) o.style.opacity = '.55'; });
+        };
+        const off = () => {
+          lab.style.fill = '#7A7F87';
+          bars.forEach(o => { o.style.opacity = ''; });
+        };
+        hit.addEventListener('mouseenter', on);
+        hit.addEventListener('mouseleave', off);
+      });
+    });
+
+    if (finePointer) {
+      // hero mouse parallax — front panels move more than back ones
+      const hero = root.querySelector('[data-hero]');
+      const wraps = root.querySelectorAll('[data-panel-wrap]');
+      hero.addEventListener('mousemove', e => {
+        const r = hero.getBoundingClientRect();
+        const mx = (e.clientX - r.left) / r.width - .5, my = (e.clientY - r.top) / r.height - .5;
+        wraps.forEach(w => {
+          const d = parseFloat(w.dataset.depth);
+          w.style.transform = 'translate3d(' + (-mx * d).toFixed(1) + 'px,' + (-my * d * .7).toFixed(1) + 'px,0)';
+        });
+      });
+      hero.addEventListener('mouseleave', () => wraps.forEach(w => { w.style.transform = ''; }));
+
+      // analysis blocks: slight tilt on hover, max 3deg
+      root.querySelectorAll('[data-tilt]').forEach(el => {
+        el.style.transition = 'transform .45s cubic-bezier(.2,.7,.2,1)';
+        el.addEventListener('mousemove', e => {
+          const r = el.getBoundingClientRect();
+          const ry = Math.max(-3, Math.min(3, ((e.clientX - r.left) / r.width - .5) * 5));
+          const rx = Math.max(-3, Math.min(3, ((e.clientY - r.top) / r.height - .5) * -5));
+          el.style.transform = 'perspective(1400px) rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg)';
+        });
+        el.addEventListener('mouseleave', () => { el.style.transform = 'none'; });
+      });
+    }
+  }
+}
+</script>
+</body>
+</html>
